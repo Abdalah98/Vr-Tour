@@ -10,21 +10,61 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var Name: UITextField!
+    @IBOutlet weak var Email: UITextField!
+    @IBOutlet weak var Password: UITextField!
+    @IBOutlet weak var confirmPassword: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view, typically from a nib.
+      
+        addImageToTextField()
+    }
+    
+    
+    
+    //MARK:- TextField
+    func addImageToTextField(){
+        let nameImage = UIImage(named:"Name")
+        addLeftImageTo(txtField: Name, andImage: nameImage!)
+        
+        let emailImage = UIImage(named:"mail")
+        addLeftImageTo(txtField: Email, andImage: emailImage!)
+        
+        let confirmpassImage = UIImage(named:"pass")
+        addLeftImageTo(txtField: Password, andImage: confirmpassImage!)
+        
+        let passwordImage = UIImage(named:"pass")
+        addLeftImageTo(txtField: confirmPassword, andImage: passwordImage!)
+        
+       
+        Name.delegate = self
+        Email.delegate = self
+        Password.delegate = self
+        confirmPassword.delegate = self
+    }
+    func addLeftImageTo(txtField: UITextField, andImage img: UIImage) {
+        let leftImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: img.size.width, height: img.size.height))
+        leftImageView.image = img
+        txtField.leftView = leftImageView
+        txtField.leftViewMode = .always
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+//MARK:- EXTENSION
+extension SignUpViewController:UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
-    */
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        
+        return true
+    }
+  
+    
+    
 }

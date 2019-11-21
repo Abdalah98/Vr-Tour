@@ -1,0 +1,24 @@
+PODS:
+  - IQKeyboardManagerSwift (6.5.4)
+  - SCLAlertView (0.8)
+  - TextFieldEffects (1.6.0)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - SCLAlertView
+  - TextFieldEffects
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - SCLAlertView
+    - TextFieldEffects
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
+
+PODFILE CHECKSUM: d4d6f79f61611648d3c65a154d85a1a1dd34e3b0
+
+COCOAPODS: 1.8.4

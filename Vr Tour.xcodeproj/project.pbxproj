@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28185555F092B7C01970EAFE /* Pods_Vr_Tour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C80771A2CC7BC09EAA5BBD /* Pods_Vr_Tour.framework */; };
 		65D7D13C23860D3A00666180 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D13B23860D3A00666180 /* AppDelegate.swift */; };
 		65D7D13E23860D3A00666180 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D13D23860D3A00666180 /* LoginViewController.swift */; };
 		65D7D14323860D3D00666180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D7D14223860D3D00666180 /* Assets.xcassets */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01C80771A2CC7BC09EAA5BBD /* Pods_Vr_Tour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vr_Tour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		283661E027BC137F52FB0867 /* Pods-Vr Tour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vr Tour.debug.xcconfig"; path = "Target Support Files/Pods-Vr Tour/Pods-Vr Tour.debug.xcconfig"; sourceTree = "<group>"; };
 		65D7D13823860D3A00666180 /* Vr Tour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vr Tour.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D7D13B23860D3A00666180 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65D7D13D23860D3A00666180 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		65D7D15623860EBE00666180 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		65D7D15823860F0600666180 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		65D7D15A23860F5100666180 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		EF1B3553C24948F1B02FB4C5 /* Pods-Vr Tour.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vr Tour.release.xcconfig"; path = "Target Support Files/Pods-Vr Tour/Pods-Vr Tour.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28185555F092B7C01970EAFE /* Pods_Vr_Tour.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17DED9D4D3AB5E400157C568 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01C80771A2CC7BC09EAA5BBD /* Pods_Vr_Tour.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C87204CF0A284EDB0F9F675 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				283661E027BC137F52FB0867 /* Pods-Vr Tour.debug.xcconfig */,
+				EF1B3553C24948F1B02FB4C5 /* Pods-Vr Tour.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		65D7D12F23860D3A00666180 = {
 			isa = PBXGroup;
 			children = (
 				65D7D13A23860D3A00666180 /* Vr Tour */,
 				65D7D13923860D3A00666180 /* Products */,
+				4C87204CF0A284EDB0F9F675 /* Pods */,
+				17DED9D4D3AB5E400157C568 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,8 +108,8 @@
 		65D7D15423860DCB00666180 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				65D7D14D23860D7200666180 /* LaunchScreen.storyboard */,
 				65D7D14E23860D7200666180 /* Main.storyboard */,
+				65D7D14D23860D7200666180 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65D7D14A23860D3D00666180 /* Build configuration list for PBXNativeTarget "Vr Tour" */;
 			buildPhases = (
+				5789F869E22DEF91D497A978 /* [CP] Check Pods Manifest.lock */,
 				65D7D13423860D3A00666180 /* Sources */,
 				65D7D13523860D3A00666180 /* Frameworks */,
 				65D7D13623860D3A00666180 /* Resources */,
+				233F1ACE39820282CF6FBB14 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,6 +192,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		233F1ACE39820282CF6FBB14 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vr Tour/Pods-Vr Tour-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vr Tour/Pods-Vr Tour-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vr Tour/Pods-Vr Tour-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5789F869E22DEF91D497A978 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vr Tour-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		65D7D13423860D3A00666180 /* Sources */ = {
@@ -301,6 +370,7 @@
 		};
 		65D7D14B23860D3D00666180 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 283661E027BC137F52FB0867 /* Pods-Vr Tour.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -318,6 +388,7 @@
 		};
 		65D7D14C23860D3D00666180 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF1B3553C24948F1B02FB4C5 /* Pods-Vr Tour.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

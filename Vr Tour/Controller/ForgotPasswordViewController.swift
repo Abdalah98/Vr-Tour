@@ -8,23 +8,23 @@
 
 import UIKit
 
-class ForgotPasswordViewController: UIViewController {
+class ForgotPasswordViewController: UIViewController ,UITextFieldDelegate{
 
+    @IBOutlet weak var ForgotPassword: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let mailImage = UIImage(named:"mail")
+        addLeftImageTo(txtField: ForgotPassword, andImage: mailImage!)
+        
+        
+        ForgotPassword.delegate = self
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func addLeftImageTo(txtField: UITextField, andImage img: UIImage) {
+        let leftImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: img.size.width, height: img.size.height))
+        leftImageView.image = img
+        txtField.leftView = leftImageView
+        txtField.leftViewMode = .always
     }
-    */
 
 }
