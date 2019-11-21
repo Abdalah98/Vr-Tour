@@ -1,0 +1,360 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65D7D13C23860D3A00666180 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D13B23860D3A00666180 /* AppDelegate.swift */; };
+		65D7D13E23860D3A00666180 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D13D23860D3A00666180 /* LoginViewController.swift */; };
+		65D7D14323860D3D00666180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D7D14223860D3D00666180 /* Assets.xcassets */; };
+		65D7D14F23860D7300666180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D7D14D23860D7200666180 /* LaunchScreen.storyboard */; };
+		65D7D15023860D7300666180 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D7D14E23860D7200666180 /* Main.storyboard */; };
+		65D7D15223860DA900666180 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D15123860DA900666180 /* UIButton+Extension.swift */; };
+		65D7D15723860EBE00666180 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D15623860EBE00666180 /* SignUpViewController.swift */; };
+		65D7D15923860F0600666180 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D15823860F0600666180 /* ForgotPasswordViewController.swift */; };
+		65D7D15B23860F5100666180 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D15A23860F5100666180 /* MapViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		65D7D13823860D3A00666180 /* Vr Tour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vr Tour.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65D7D13B23860D3A00666180 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		65D7D13D23860D3A00666180 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		65D7D14223860D3D00666180 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65D7D14723860D3D00666180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65D7D14D23860D7200666180 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		65D7D14E23860D7200666180 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		65D7D15123860DA900666180 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		65D7D15623860EBE00666180 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		65D7D15823860F0600666180 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		65D7D15A23860F5100666180 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65D7D13523860D3A00666180 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65D7D12F23860D3A00666180 = {
+			isa = PBXGroup;
+			children = (
+				65D7D13A23860D3A00666180 /* Vr Tour */,
+				65D7D13923860D3A00666180 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		65D7D13923860D3A00666180 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65D7D13823860D3A00666180 /* Vr Tour.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65D7D13A23860D3A00666180 /* Vr Tour */ = {
+			isa = PBXGroup;
+			children = (
+				65D7D13B23860D3A00666180 /* AppDelegate.swift */,
+				65D7D15523860E0600666180 /* Controller */,
+				65D7D15423860DCB00666180 /* View */,
+				65D7D15323860DBA00666180 /* Extension */,
+				65D7D14723860D3D00666180 /* Info.plist */,
+				65D7D14223860D3D00666180 /* Assets.xcassets */,
+			);
+			path = "Vr Tour";
+			sourceTree = "<group>";
+		};
+		65D7D15323860DBA00666180 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				65D7D15123860DA900666180 /* UIButton+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		65D7D15423860DCB00666180 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				65D7D14D23860D7200666180 /* LaunchScreen.storyboard */,
+				65D7D14E23860D7200666180 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		65D7D15523860E0600666180 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				65D7D13D23860D3A00666180 /* LoginViewController.swift */,
+				65D7D15623860EBE00666180 /* SignUpViewController.swift */,
+				65D7D15823860F0600666180 /* ForgotPasswordViewController.swift */,
+				65D7D15A23860F5100666180 /* MapViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65D7D13723860D3A00666180 /* Vr Tour */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65D7D14A23860D3D00666180 /* Build configuration list for PBXNativeTarget "Vr Tour" */;
+			buildPhases = (
+				65D7D13423860D3A00666180 /* Sources */,
+				65D7D13523860D3A00666180 /* Frameworks */,
+				65D7D13623860D3A00666180 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Vr Tour";
+			productName = "Vr Tour";
+			productReference = 65D7D13823860D3A00666180 /* Vr Tour.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65D7D13023860D3A00666180 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Hello Tomorrow";
+				TargetAttributes = {
+					65D7D13723860D3A00666180 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = 65D7D13323860D3A00666180 /* Build configuration list for PBXProject "Vr Tour" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 65D7D12F23860D3A00666180;
+			productRefGroup = 65D7D13923860D3A00666180 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65D7D13723860D3A00666180 /* Vr Tour */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65D7D13623860D3A00666180 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65D7D15023860D7300666180 /* Main.storyboard in Resources */,
+				65D7D14F23860D7300666180 /* LaunchScreen.storyboard in Resources */,
+				65D7D14323860D3D00666180 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65D7D13423860D3A00666180 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65D7D13E23860D3A00666180 /* LoginViewController.swift in Sources */,
+				65D7D15B23860F5100666180 /* MapViewController.swift in Sources */,
+				65D7D15923860F0600666180 /* ForgotPasswordViewController.swift in Sources */,
+				65D7D13C23860D3A00666180 /* AppDelegate.swift in Sources */,
+				65D7D15723860EBE00666180 /* SignUpViewController.swift in Sources */,
+				65D7D15223860DA900666180 /* UIButton+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		65D7D14823860D3D00666180 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		65D7D14923860D3D00666180 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65D7D14B23860D3D00666180 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Vr Tour/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Abdalah.Vr-Tour";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65D7D14C23860D3D00666180 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Vr Tour/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Abdalah.Vr-Tour";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65D7D13323860D3A00666180 /* Build configuration list for PBXProject "Vr Tour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65D7D14823860D3D00666180 /* Debug */,
+				65D7D14923860D3D00666180 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65D7D14A23860D3D00666180 /* Build configuration list for PBXNativeTarget "Vr Tour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65D7D14B23860D3D00666180 /* Debug */,
+				65D7D14C23860D3D00666180 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65D7D13023860D3A00666180 /* Project object */;
+}
