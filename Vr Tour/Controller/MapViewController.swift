@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Firebase
+import SCLAlertView
 class MapViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -16,15 +17,15 @@ class MapViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func signout(_ sender: Any) {
+        do{
+            try Auth.auth().signOut()
+            self.dismiss(animated: true, completion: nil)
+        }catch{
+            SCLAlertView().showError("Error", subTitle:"There was a problem siging out check internet connection", closeButtonTitle:"Ok")
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        }
     }
-    */
+
 
 }

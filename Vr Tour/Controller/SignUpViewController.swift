@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import SCLAlertView
+import Firebase
 class SignUpViewController: UIViewController {
 
     @IBOutlet weak var Name: UITextField!
@@ -21,12 +22,40 @@ class SignUpViewController: UIViewController {
         
     }
     
-    
+    @IBAction func SignUp(_ sender: Any) {
+        if Name.text!.isEmpty || Email.text!.isEmpty || Password.text!.isEmpty ||
+            confirmPassword.text!.isEmpty{
+            SCLAlertView().showError("Error", subTitle:"Some field is empty", closeButtonTitle:"Ok")
+        } else {
+            if ((self.Password.text?.elementsEqual(self.confirmPassword.text!))! != true)
+            {
+                SCLAlertView().showError("Error", subTitle:"Passwords do not match", closeButtonTitle:"Ok")
+                
+                return
+            }else{
+            Auth.auth().createUser(withEmail: Email.text!,password: Password.text!) { (user, error) in
+                if error != nil  {
+                    
+                   SCLAlertView().showError("Error", subTitle:"User already exists", closeButtonTitle:"Ok")
+                    
+                }else {
+                    
+                    SCLAlertView().showSuccess("Success ", subTitle:"is added successfully", closeButtonTitle:"Ok")
+                    self.performSegue(withIdentifier: "SignUpMap", sender: self)
+                }
+            }
+
+            
+        }
+    }
+    }
 
     
    
 
 }
+//    let questionBagVC = storyboard?.instantiateViewController(withIdentifier: "Map")
+//    navigationController?.pushViewController(questionBagVC!, animated: true)
 //MARK:- EXTENSION
 extension SignUpViewController:UITextFieldDelegate {
     

@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import SCLAlertView
+import Firebase
 class LoginViewController: UIViewController ,UITextFieldDelegate{
 
     @IBOutlet weak var emailText: UITextField!
@@ -19,5 +20,27 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         
     }
     
+    @IBAction func LogIn(_ sender: Any) {
+        if emailText.text!.isEmpty || passwordText.text!.isEmpty {
+            SCLAlertView().showError("Error", subTitle:"Some field is empty", closeButtonTitle:"Ok")
+        } else {
+            
+            Auth.auth().signIn(withEmail: emailText.text!,password: passwordText.text!) { (user, error) in
+                if error != nil  {
+                    
+                    SCLAlertView().showError("Error", subTitle:"Email or Password error", closeButtonTitle:"Ok")
+                    
+                }else {
+                    
+                    SCLAlertView().showSuccess("Success ", subTitle:"Log In success", closeButtonTitle:"Ok")
+                    self.performSegue(withIdentifier: "LoginMap", sender: self)
+                }
+            }
+            
+            
+        }
+    }
 }
 
+//    let questionBagVC = storyboard?.instantiateViewController(withIdentifier: "Map")
+//    navigationController?.pushViewController(questionBagVC!, animated: true)

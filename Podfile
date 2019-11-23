@@ -10,4 +10,8 @@ target 'Vr Tour' do
 pod 'IQKeyboardManagerSwift'
 pod 'SCLAlertView'
 pod 'TextFieldEffects'
+pod 'Firebase/Analytics'
+pod 'Firebase/Auth'
+
+
 end
