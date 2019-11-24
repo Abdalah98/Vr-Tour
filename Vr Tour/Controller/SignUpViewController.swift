@@ -39,9 +39,10 @@ class SignUpViewController: UIViewController {
                    SCLAlertView().showError("Error", subTitle:"User already exists", closeButtonTitle:"Ok")
                     
                 }else {
-                    
+                let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap")
+                    self.present(viewController!, animated: true, completion: nil)
                     SCLAlertView().showSuccess("Success ", subTitle:"is added successfully", closeButtonTitle:"Ok")
-                    self.performSegue(withIdentifier: "SignUpMap", sender: self)
+
                 }
             }
 

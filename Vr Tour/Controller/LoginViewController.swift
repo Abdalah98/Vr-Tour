@@ -32,8 +32,9 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
                     
                 }else {
                     
+                    let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap")
+                    self.present(viewController!, animated: true, completion: nil)
                     SCLAlertView().showSuccess("Success ", subTitle:"Log In success", closeButtonTitle:"Ok")
-                    self.performSegue(withIdentifier: "LoginMap", sender: self)
                 }
             }
             
