@@ -13,5 +13,11 @@ pod 'TextFieldEffects'
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'SideMenu', '~> 6.0'
-
+pod 'Firebase/Core'
+pod 'FBSDKCoreKit'
+pod 'FBSDKLoginKit'
+pod 'GoogleSignIn'
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
 end

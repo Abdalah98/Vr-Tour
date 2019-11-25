@@ -9,15 +9,16 @@
 import UIKit
 import SCLAlertView
 import Firebase
-class LoginViewController: UIViewController ,UITextFieldDelegate{
+import FBSDKLoginKit
+import GoogleSignIn
 
+class LoginViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       navigationController?.title = "LogIn"
-        
+
     }
     
     @IBAction func LogIn(_ sender: Any) {
@@ -25,7 +26,9 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
     }
     
     
+    @IBAction func onClickFacebookLoginButton(_ sender: UIButton) {
     
+    }
     
     
     //MARK:- FireBase
