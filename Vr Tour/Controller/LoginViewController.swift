@@ -16,25 +16,37 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       
+       navigationController?.title = "LogIn"
         
     }
     
     @IBAction func LogIn(_ sender: Any) {
+      Login()
+    }
+    
+    
+    
+    
+    
+    //MARK:- FireBase
+    func Login(){
         if emailText.text!.isEmpty || passwordText.text!.isEmpty {
             SCLAlertView().showError("Error", subTitle:"Some field is empty", closeButtonTitle:"Ok")
         } else {
             
             Auth.auth().signIn(withEmail: emailText.text!,password: passwordText.text!) { (user, error) in
-                if error != nil  {
-                    
-                    SCLAlertView().showError("Error", subTitle:"Email or Password error", closeButtonTitle:"Ok")
-                    
-                }else {
-                    
+                if (error == nil)  {
+                    print("log is true")
+                    UserDefaults.standard.set(self.emailText.text!, forKey: "email")
+                    UserDefaults.standard.synchronize()
                     let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap")
                     self.present(viewController!, animated: true, completion: nil)
                     SCLAlertView().showSuccess("Success ", subTitle:"Log In success", closeButtonTitle:"Ok")
+                    
+                    
+                }else {
+                    print("log in error")
+                    SCLAlertView().showError("Error", subTitle: (error?.localizedDescription)!, closeButtonTitle:"Ok")
                 }
             }
             
@@ -43,5 +55,3 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
     }
 }
 
-//    let questionBagVC = storyboard?.instantiateViewController(withIdentifier: "Map")
-//    navigationController?.pushViewController(questionBagVC!, animated: true)

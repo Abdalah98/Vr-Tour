@@ -19,10 +19,21 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
       
-        
+ 
     }
     
     @IBAction func SignUp(_ sender: Any) {
+       siginUp()
+    }
+
+    
+    
+    
+    
+    //MARK:- FireBase
+    //MARK:- FireBase siginUp()
+
+    func siginUp(){
         if Name.text!.isEmpty || Email.text!.isEmpty || Password.text!.isEmpty ||
             confirmPassword.text!.isEmpty{
             SCLAlertView().showError("Error", subTitle:"Some field is empty", closeButtonTitle:"Ok")
@@ -33,31 +44,39 @@ class SignUpViewController: UIViewController {
                 
                 return
             }else{
-            Auth.auth().createUser(withEmail: Email.text!,password: Password.text!) { (user, error) in
-                if error != nil  {
-                    
-                   SCLAlertView().showError("Error", subTitle:"User already exists", closeButtonTitle:"Ok")
-                    
-                }else {
-                let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap")
-                    self.present(viewController!, animated: true, completion: nil)
-                    SCLAlertView().showSuccess("Success ", subTitle:"is added successfully", closeButtonTitle:"Ok")
-
+                Auth.auth().createUser(withEmail: Email.text!,password: Password.text!) { (user, error) in
+                    if (error == nil)  {
+                        print("Signup successfull")
+                        
+                        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap")
+                        self.present(viewController!, animated: true, completion: nil)
+                        SCLAlertView().showSuccess("Success ", subTitle:"is added successfully", closeButtonTitle:"Ok")
+                        
+                    }else {
+                        
+                        SCLAlertView().showError("Error", subTitle:(error?.localizedDescription)!, closeButtonTitle:"Ok")
+                        
+                    }
                 }
+                
+                
             }
-
-            
         }
     }
+    func setRootViewController() {
+        if Auth.auth().currentUser != nil {
+            // Set Your home view controller Here as root View Controller
+            let viewController = storyboard?.instantiateViewController(withIdentifier: "GoToMap")
+            self.present(viewController!, animated: true, completion: nil)
+        } else {
+            // Set you login view controller here as root view controller
+            let viewController = storyboard?.instantiateViewController(withIdentifier: "GoToLogin")
+            self.present(viewController!, animated: true, completion: nil)
+        }
     }
 
-    
-   
-
 }
-//    let questionBagVC = storyboard?.instantiateViewController(withIdentifier: "Map")
-//    navigationController?.pushViewController(questionBagVC!, animated: true)
-//MARK:- EXTENSION
+
 extension SignUpViewController:UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
