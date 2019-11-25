@@ -13,22 +13,11 @@ class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.title = "Tour By Vr"
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func signout(_ sender: Any) {
-        do{
-            try Auth.auth().signOut()
-            UserDefaults.standard.removeObject(forKey: "name")
-            UserDefaults.standard.removeObject(forKey: "email")
-            self.dismiss(animated: true, completion: nil)
-        }catch{
-            SCLAlertView().showError("Error", subTitle:"There was a problem siging out check internet connection", closeButtonTitle:"Ok")
-
-        }
-    }
+   
 
 
 }

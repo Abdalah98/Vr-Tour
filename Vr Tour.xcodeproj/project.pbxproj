@@ -10,6 +10,7 @@
 		28185555F092B7C01970EAFE /* Pods_Vr_Tour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C80771A2CC7BC09EAA5BBD /* Pods_Vr_Tour.framework */; };
 		655612B12389C08000134E4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 655612B02389C08000134E4B /* GoogleService-Info.plist */; };
 		657CD0AF238869EF00592709 /* textfieldsimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657CD0AE238869EF00592709 /* textfieldsimage.swift */; };
+		65D76DA4238BB236001CADB4 /* SideMenuTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D76DA3238BB236001CADB4 /* SideMenuTableVC.swift */; };
 		65D7D13C23860D3A00666180 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D13B23860D3A00666180 /* AppDelegate.swift */; };
 		65D7D13E23860D3A00666180 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D13D23860D3A00666180 /* LoginViewController.swift */; };
 		65D7D14323860D3D00666180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D7D14223860D3D00666180 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		283661E027BC137F52FB0867 /* Pods-Vr Tour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vr Tour.debug.xcconfig"; path = "Target Support Files/Pods-Vr Tour/Pods-Vr Tour.debug.xcconfig"; sourceTree = "<group>"; };
 		655612B02389C08000134E4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		657CD0AE238869EF00592709 /* textfieldsimage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textfieldsimage.swift; sourceTree = "<group>"; };
+		65D76DA3238BB236001CADB4 /* SideMenuTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SideMenuTableVC.swift; path = "Vr Tour/Controller/SideMenuTableVC.swift"; sourceTree = SOURCE_ROOT; };
 		65D7D13823860D3A00666180 /* Vr Tour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vr Tour.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D7D13B23860D3A00666180 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65D7D13D23860D3A00666180 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				65D7D13D23860D3A00666180 /* LoginViewController.swift */,
 				65D7D15623860EBE00666180 /* SignUpViewController.swift */,
 				65D7D15823860F0600666180 /* ForgotPasswordViewController.swift */,
+				65D76DA3238BB236001CADB4 /* SideMenuTableVC.swift */,
 				65D7D15A23860F5100666180 /* MapViewController.swift */,
 			);
 			path = Controller;
@@ -249,6 +252,7 @@
 				65D7D13E23860D3A00666180 /* LoginViewController.swift in Sources */,
 				65D7D15B23860F5100666180 /* MapViewController.swift in Sources */,
 				657CD0AF238869EF00592709 /* textfieldsimage.swift in Sources */,
+				65D76DA4238BB236001CADB4 /* SideMenuTableVC.swift in Sources */,
 				65D7D15923860F0600666180 /* ForgotPasswordViewController.swift in Sources */,
 				65D7D13C23860D3A00666180 /* AppDelegate.swift in Sources */,
 				65D7D15723860EBE00666180 /* SignUpViewController.swift in Sources */,

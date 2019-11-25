@@ -77,6 +77,7 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - SCLAlertView (0.8)
+  - SideMenu (6.4.7)
   - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
@@ -84,6 +85,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - IQKeyboardManagerSwift
   - SCLAlertView
+  - SideMenu (~> 6.0)
   - TextFieldEffects
 
 SPEC REPOS:
@@ -104,6 +106,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - nanopb
     - SCLAlertView
+    - SideMenu
     - TextFieldEffects
 
 SPEC CHECKSUMS:
@@ -123,8 +126,9 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  SideMenu: 928a015669c3afc201e1fe3a87f1b0bc8993a664
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 673fed34d733a993f176f7451d972d05a4acce03
+PODFILE CHECKSUM: 02efb1a4aac6ad6868aeca17644dcfb8af2fa909
 
 COCOAPODS: 1.8.4

@@ -12,6 +12,6 @@ pod 'SCLAlertView'
 pod 'TextFieldEffects'
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
-
+pod 'SideMenu', '~> 6.0'
 
 end
