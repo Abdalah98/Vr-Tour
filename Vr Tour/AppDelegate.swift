@@ -12,6 +12,8 @@ import Firebase
 import FBSDKCoreKit
 import GoogleSignIn
 import FBSDKLoginKit
+import FBSDKCoreKit
+import SCLAlertView
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -22,14 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         FirebaseApp.configure()
       ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
-
+      
+      
         return true
     }
   func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
-     return GIDSignIn.sharedInstance().handle(url)
-   }
-    
-
-//https://vr-tour-aec44.firebaseapp.com/__/auth/handler
+    return GIDSignIn.sharedInstance().handle(url)
+  }
+   
 }
+
 

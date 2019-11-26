@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="U7p-aO-5JK">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000006" height="862.00000000000011"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pYT-AV-EUN">
                                 <rect key="frame" x="97" y="393" width="220" height="110"/>
@@ -101,13 +101,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlJ-7t-ted">
-                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9T6-qv-UqL">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1042"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mfh-bl-AUn">
-                                                <rect key="frame" x="107" y="0.0" width="200" height="160"/>
+                                                <rect key="frame" x="107" y="0.0" width="200.00000000000011" height="160"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="GWh-cP-VEV"/>
                                                     <constraint firstAttribute="height" constant="160" id="QjT-0i-vVa"/>
@@ -216,6 +216,9 @@
                                                             <constraint firstAttribute="height" constant="50" id="v3x-ra-rZ5"/>
                                                         </constraints>
                                                         <state key="normal" title="Button" image="google"/>
+                                                        <connections>
+                                                            <action selector="onClickGoogleLoginButton:" destination="Fbx-Vc-fMz" eventType="touchUpInside" id="fkc-6P-tAf"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIa-rQ-dpx">
                                                         <rect key="frame" x="0.0" y="68" width="240" height="50"/>
@@ -287,7 +290,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="955-BB-Lv6">
-                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Coy-qT-O1X">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1042"/>
@@ -354,7 +357,7 @@
                                                 </subviews>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="f4s-1G-RsL">
-                                                <rect key="frame" x="107" y="0.0" width="200" height="160"/>
+                                                <rect key="frame" x="107" y="0.0" width="200.00000000000011" height="160"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="MXX-9b-tm5"/>
                                                     <constraint firstAttribute="height" constant="160" id="hpa-6e-EGq"/>
@@ -402,6 +405,9 @@
                                                             <constraint firstAttribute="height" constant="50" id="sqi-ga-DQX"/>
                                                         </constraints>
                                                         <state key="normal" title="Button" image="google"/>
+                                                        <connections>
+                                                            <action selector="googleSignInSender:" destination="ZlI-7E-83R" eventType="touchUpInside" id="vXc-uf-JAJ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDx-TJ-OJy">
                                                         <rect key="frame" x="0.0" y="70" width="240" height="50"/>
@@ -409,6 +415,9 @@
                                                             <constraint firstAttribute="height" constant="50" id="oyD-0R-Yhd"/>
                                                         </constraints>
                                                         <state key="normal" image="face"/>
+                                                        <connections>
+                                                            <action selector="onClickFacebookLoginButton:" destination="ZlI-7E-83R" eventType="touchUpInside" id="QIG-Il-VsS"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -491,13 +500,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6D-Ay-I0U">
-                                <rect key="frame" x="106.5" y="128" width="201.5" height="29"/>
+                                <rect key="frame" x="106.5" y="72" width="201.5" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="541-Zi-gua">
-                                <rect key="frame" x="90" y="326.5" width="234" height="50"/>
+                                <rect key="frame" x="90" y="270.5" width="234" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMq-K3-Xp2">
                                         <rect key="frame" x="0.0" y="0.0" width="234" height="50"/>
@@ -521,7 +530,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rD0-Nx-W9Z">
-                                <rect key="frame" x="5" y="211.5" width="404" height="50"/>
+                                <rect key="frame" x="5" y="155.5" width="404" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Enter Your Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1q-KX-WvH" customClass="DesignableUITextField" customModule="Vr_Tour" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="404" height="50"/>
@@ -762,6 +771,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Pke-gr-HQN"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="as0-kC-Xb5">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -791,6 +801,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="goe-i4-9Rz"/>
-        <segue reference="ZfK-rL-hBS"/>
+        <segue reference="wkc-zh-dP1"/>
     </inferredMetricsTieBreakers>
 </document>
