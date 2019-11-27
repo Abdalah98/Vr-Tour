@@ -12,6 +12,7 @@ import Firebase
 import GoogleSignIn
 import FBSDKCoreKit
 import FBSDKLoginKit
+import FirebaseDatabase
 class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDelegate{
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
@@ -24,12 +25,17 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
  
         GIDSignIn.sharedInstance().delegate = self
 
+        self.check()
     }
-    
     @IBAction func LogIn(_ sender: Any) {
-      Login()
+    //  Login()
+        self.save()
+         if emailText.text!.isEmpty || passwordText.text!.isEmpty {
+                    SCLAlertView().showError("Error", subTitle:"Some field is empty", closeButtonTitle:"Ok")
+               } else {
+            logUserIn(withEmail: emailText.text!, password: passwordText.text!)
     }
-    
+    }
     
     @IBAction func onClickFacebookLoginButton(_ sender: UIButton) {
        LoginFacebook()
@@ -42,36 +48,39 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
       GIDSignIn.sharedInstance().signIn()
        
     }
-    
+    func save()
+    {
+        UserDefaults.standard.setValue(emailText.text!, forKey: "Name")
+        UserDefaults.standard.setValue(passwordText.text!, forKey: "pas")
+  UserDefaults.standard.synchronize()
+    }
+    func check()
+    {
+       let email = UserDefaults.standard.value(forKey:"Name" ) as? String ?? ""
+        emailText.text = email
+        let pass = UserDefaults.standard.value(forKey:"pas" ) as? String ?? ""
+        passwordText.text = pass
+        
+    }
     
     //MARK:- FireBase
     //MARK:- FireBase Login
 
-     func Login(){
-         if emailText.text!.isEmpty || passwordText.text!.isEmpty {
-             SCLAlertView().showError("Error", subTitle:"Some field is empty", closeButtonTitle:"Ok")
-         } else {
-             
-             Auth.auth().signIn(withEmail: emailText.text!,password: passwordText.text!) { (user, error) in
-                 if (error == nil)  {
-                     print("log is true")
-                     UserDefaults.standard.set(self.emailText.text!, forKey: "email")
-                     UserDefaults.standard.synchronize()
-                     let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap")
-                     self.present(viewController!, animated: true, completion: nil)
-                     SCLAlertView().showSuccess("Success ", subTitle:"Log In success", closeButtonTitle:"Ok")
-                     
-                     
-                 }else {
-                     print("log in error")
-                     SCLAlertView().showError("Error", subTitle: (error?.localizedDescription)!, closeButtonTitle:"Ok")
-                 }
-             }
-             
-             
-         }
-     }
-  
+    
+    func logUserIn(withEmail email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            
+            if let error = error {
+                print("Failed to sign user in with error: ", error.localizedDescription)
+                   SCLAlertView().showError("Error", subTitle: (error.localizedDescription), closeButtonTitle:"Ok")
+                return
+            }
+            
+           let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap")
+             self.present(viewController!, animated: true, completion: nil)
+           SCLAlertView().showSuccess("Success ", subTitle:"is added successfully", closeButtonTitle:"Ok")
+            }
+        }
     
     
     //MARK:- FireBase Google
@@ -108,6 +117,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
 
        func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
       GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        
        }
     func sign(_ signIn: GIDSignIn?, present viewController: UIViewController?) {
 
@@ -163,5 +173,6 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
                      
                  }
     }
+    
 }
 

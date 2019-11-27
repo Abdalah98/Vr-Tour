@@ -38,9 +38,11 @@ class ForgotPasswordViewController: UIViewController ,UITextFieldDelegate{
                 SCLAlertView().showError("Error", subTitle:(error?.localizedDescription)!, closeButtonTitle:"Try again")
             }
             else {
-               SCLAlertView().showSuccess("Success", subTitle:"Password reset email sent check you mail", closeButtonTitle:"Ok")
-                let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToLogin")
+                 let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToLogin")
                 self.present(viewController!, animated: true, completion: nil)
+
+               SCLAlertView().showSuccess("Success", subTitle:"Password reset email sent check you mail", closeButtonTitle:"Ok")
+               
                 
             }
             

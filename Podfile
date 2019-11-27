@@ -20,4 +20,5 @@ pod 'GoogleSignIn'
 pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
+pod 'Firebase/Database'
 end

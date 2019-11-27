@@ -10,8 +10,9 @@ import UIKit
 import SCLAlertView
 import Firebase
 import GoogleSignIn
-import FBSDKCoreKit
 import FBSDKLoginKit
+import FBSDKCoreKit
+import FirebaseDatabase
 class SignUpViewController: UIViewController , GIDSignInDelegate{
 
     @IBOutlet weak var Name: UITextField!
@@ -27,10 +28,29 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
       GIDSignIn.sharedInstance().delegate = self
     }
     
+    
+    
     @IBAction func SignUp(_ sender: Any) {
-       siginUp()
+        if Name.text!.isEmpty || Email.text!.isEmpty || Password.text!.isEmpty ||
+                    confirmPassword.text!.isEmpty{
+                      SCLAlertView().showError("Error", subTitle:"Some field is empty", closeButtonTitle:"Ok")
+        }else{
+            if ((self.Password.text?.elementsEqual(self.confirmPassword.text!))! != true)
+            {  SCLAlertView().showError("Error", subTitle:"Passwords do not match", closeButtonTitle:"Ok")
+                
+            }else{
+        createUser(withEmail: Email.text!, password: Password.text!, username: Name.text!)
+         }
+        }
     }
-
+    
+    
+    
+    
+    
+    
+    
+    
     @IBAction func onClickFacebookLoginButton(_ sender: UIButton) {
          LoginFacebook()
       }
@@ -90,79 +110,85 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
     
     
     
+    
+    
        //MARK:- FireBase siginUp()
 
-       func siginUp(){
-           if Name.text!.isEmpty || Email.text!.isEmpty || Password.text!.isEmpty ||
-               confirmPassword.text!.isEmpty{
-               SCLAlertView().showError("Error", subTitle:"Some field is empty", closeButtonTitle:"Ok")
-           } else {
-               if ((self.Password.text?.elementsEqual(self.confirmPassword.text!))! != true)
-               {
-                   SCLAlertView().showError("Error", subTitle:"Passwords do not match", closeButtonTitle:"Ok")
-                   
-                   return
-               }else{
-                   Auth.auth().createUser(withEmail: Email.text!,password: Password.text!) { (user, error) in
-                       if (error == nil)  {
-                           print("Signup successfull")
-                           
-                           let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap")
-                           self.present(viewController!, animated: true, completion: nil)
-                           SCLAlertView().showSuccess("Success ", subTitle:"is added successfully", closeButtonTitle:"Ok")
-                           
-                       }else {
-                           
-                           SCLAlertView().showError("Error", subTitle:(error?.localizedDescription)!, closeButtonTitle:"Ok")
-                           
-                       }
-                   }
-                   
-                   
-               }
-           }
-       }
-       
+    
+    
+    func createUser(withEmail email: String, password: String, username: String) {
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            
+            if let error = error {
+                print("Failed to sign user up with error: ", error.localizedDescription)
+                    SCLAlertView().showError("Error", subTitle:(error.localizedDescription), closeButtonTitle:"Ok")
+                return
+            }
+            
+            guard let uid = result?.user.uid else { return }
+            
+            let values = ["email": email, "username": username]
+
+           Database.database().reference().child("users").child(uid).updateChildValues(values, withCompletionBlock: { (error, ref) in
+                if let error = error {
+                    print("Failed to update database values with error: ", error.localizedDescription)
+                    SCLAlertView().showError("Error", subTitle:(error.localizedDescription), closeButtonTitle:"Ok")
+
+                    return
+                }
+                
+                                let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap")
+                                         self.present(viewController!, animated: true, completion: nil)
+                                         SCLAlertView().showSuccess("Success ", subTitle:"is added successfully", closeButtonTitle:"Ok")
+            })
+            
+        }
+        
+    }
+    
+   
+     
        //MARK:- FireBase LoginFacebook
 
-       func LoginFacebook(){
-           let fbLoginManager = LoginManager()
-                  fbLoginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
-                        if let error = error {
-                            print("Failed to login: \(error.localizedDescription)")
-                          
-                            return
-                        }
-                        
-                      guard let accessToken = AccessToken.current else {
-                            print("Failed to get access token")
-                            return
-                        }
-                        
-                      let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
-                        
-                        // Perform login by calling Firebase APIs
-                      Auth.auth().signIn(with: credential, completion: { (user, error) in
-                            if let error = error {
-                                print("Login error: \(error.localizedDescription)")
-                                let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
-                                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                                alertController.addAction(okayAction)
-                                self.present(alertController, animated: true, completion: nil)
-                                
-                                return
-                            }
-                            
-                            // Present the main view
-                            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap") {
-                                UIApplication.shared.keyWindow?.rootViewController = viewController
-                                self.dismiss(animated: true, completion: nil)
-                            }
-                            
-                        })
-                        
-                    }
-       }
+   func LoginFacebook(){
+              let fbLoginManager = LoginManager()
+                     fbLoginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
+                           if let error = error {
+                               print("Failed to login: \(error.localizedDescription)")
+                             
+                               return
+                           }
+                           
+                         guard let accessToken = AccessToken.current else {
+                               print("Failed to get access token")
+                               return
+                           }
+                           
+                         let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+                           
+                           // Perform login by calling Firebase APIs
+                         Auth.auth().signIn(with: credential, completion: { (user, error) in
+                               if let error = error {
+                                   print("Login error: \(error.localizedDescription)")
+                                   let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+                                   let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                                   alertController.addAction(okayAction)
+                                   self.present(alertController, animated: true, completion: nil)
+                                   
+                                   return
+                               }
+                               
+                               // Present the main view
+                               if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap") {
+                                   UIApplication.shared.keyWindow?.rootViewController = viewController
+                                   self.dismiss(animated: true, completion: nil)
+                               }
+                               
+                           })
+                           
+                       }
+          }
 }
 
 
@@ -182,3 +208,4 @@ extension SignUpViewController:UITextFieldDelegate {
     
     
 }
+
