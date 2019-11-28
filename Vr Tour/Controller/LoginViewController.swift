@@ -13,6 +13,7 @@ import GoogleSignIn
 import FBSDKCoreKit
 import FBSDKLoginKit
 import FirebaseDatabase
+import SVProgressHUD
 class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDelegate{
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
@@ -29,6 +30,8 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
     }
     @IBAction func LogIn(_ sender: Any) {
     //  Login()
+        SVProgressHUD.show()
+
         self.save()
          if emailText.text!.isEmpty || passwordText.text!.isEmpty {
                     SCLAlertView().showError("Error", subTitle:"Some field is empty", closeButtonTitle:"Ok")
@@ -38,13 +41,16 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
     }
     
     @IBAction func onClickFacebookLoginButton(_ sender: UIButton) {
+        SVProgressHUD.show()
+
        LoginFacebook()
     }
     
 
 
     @IBAction func onClickGoogleLoginButton(_ sender: Any) {
-        
+        SVProgressHUD.show()
+
       GIDSignIn.sharedInstance().signIn()
        
     }
@@ -69,13 +75,15 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
     
     func logUserIn(withEmail email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-            
+            SVProgressHUD.dismiss()
+
             if let error = error {
                 print("Failed to sign user in with error: ", error.localizedDescription)
                    SCLAlertView().showError("Error", subTitle: (error.localizedDescription), closeButtonTitle:"Ok")
                 return
             }
-            
+            SVProgressHUD.dismiss()
+
            let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap")
              self.present(viewController!, animated: true, completion: nil)
            SCLAlertView().showSuccess("Success ", subTitle:"is added successfully", closeButtonTitle:"Ok")
@@ -87,6 +95,8 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
 
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         print("Google Sing In didSignInForUser")
+        SVProgressHUD.dismiss()
+
                  if let error = error {
                print("Failed to login: \(error.localizedDescription)")
                    return
@@ -98,6 +108,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
          print("Failed to get access token")
          Auth.auth().signIn(with: credential, completion: { (user, error) in
                    if let error = error {
+                    SVProgressHUD.dismiss()
 
                   print("Login error: \(error.localizedDescription)")
                     let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
@@ -107,6 +118,8 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
 
                      return
                    }
+            SVProgressHUD.dismiss()
+
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap") {
                                         UIApplication.shared.keyWindow?.rootViewController = viewController
                                         self.dismiss(animated: true, completion: nil)
@@ -140,7 +153,8 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
                fbLoginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
                      if let error = error {
                          print("Failed to login: \(error.localizedDescription)")
-                       
+                       SVProgressHUD.dismiss()
+
                          return
                      }
                      
@@ -154,6 +168,8 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
                      // Perform login by calling Firebase APIs
                    Auth.auth().signIn(with: credential, completion: { (user, error) in
                          if let error = error {
+                            SVProgressHUD.dismiss()
+
                              print("Login error: \(error.localizedDescription)")
                              let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
                              let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -162,7 +178,8 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
                              
                              return
                          }
-                         
+                         SVProgressHUD.dismiss()
+
                          // Present the main view
                          if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap") {
                              UIApplication.shared.keyWindow?.rootViewController = viewController

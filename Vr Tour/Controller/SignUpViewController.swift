@@ -13,6 +13,7 @@ import GoogleSignIn
 import FBSDKLoginKit
 import FBSDKCoreKit
 import FirebaseDatabase
+import SVProgressHUD
 class SignUpViewController: UIViewController , GIDSignInDelegate{
 
     @IBOutlet weak var Name: UITextField!
@@ -31,6 +32,8 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
     
     
     @IBAction func SignUp(_ sender: Any) {
+        SVProgressHUD.show()
+
         if Name.text!.isEmpty || Email.text!.isEmpty || Password.text!.isEmpty ||
                     confirmPassword.text!.isEmpty{
                       SCLAlertView().showError("Error", subTitle:"Some field is empty", closeButtonTitle:"Ok")
@@ -52,62 +55,19 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
     
     
     @IBAction func onClickFacebookLoginButton(_ sender: UIButton) {
+        SVProgressHUD.show()
+
          LoginFacebook()
       }
       
     
     
-      //MARK:- FireBase Google
-   //  Present a sign-in with Google window
       @IBAction func googleSignIn(sender: AnyObject) {
+        SVProgressHUD.show()
+
         GIDSignIn.sharedInstance().signIn()
       }
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-        print("Google Sing In didSignInForUser")
-                 if let error = error {
-               print("Failed to login: \(error.localizedDescription)")
-                   return
-                 }
-
-         guard let authentication = user.authentication else { return }
-         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                           accessToken: authentication.accessToken)
-         print("Failed to get access token")
-         Auth.auth().signIn(with: credential, completion: { (user, error) in
-                   if let error = error {
-
-                  print("Login error: \(error.localizedDescription)")
-                    let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
-                    let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(okayAction)
-                    self.present(alertController, animated: true, completion: nil)
-
-                     return
-                   }
-            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap") {
-                                        UIApplication.shared.keyWindow?.rootViewController = viewController
-                                        self.dismiss(animated: true, completion: nil)
-                                    }
-                 })
-               }
-
-
-       func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-      GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-       }
-    func sign(_ signIn: GIDSignIn?, present viewController: UIViewController?) {
-
-      // Showing OAuth2 authentication window
-      if let aController = viewController {
-        present(aController, animated: true) {() -> Void in }
-      }
-    }
-    // After Google OAuth2 authentication
-    func sign(_ signIn: GIDSignIn?, dismiss viewController: UIViewController?) {
-      // Close OAuth2 authentication window
-      dismiss(animated: true) {() -> Void in }
-    }
-    
+   
     
     
     
@@ -119,7 +79,8 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
     func createUser(withEmail email: String, password: String, username: String) {
         
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-            
+            SVProgressHUD.dismiss()
+
             if let error = error {
                 print("Failed to sign user up with error: ", error.localizedDescription)
                     SCLAlertView().showError("Error", subTitle:(error.localizedDescription), closeButtonTitle:"Ok")
@@ -132,12 +93,15 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
 
            Database.database().reference().child("users").child(uid).updateChildValues(values, withCompletionBlock: { (error, ref) in
                 if let error = error {
+                    SVProgressHUD.dismiss()
+
                     print("Failed to update database values with error: ", error.localizedDescription)
                     SCLAlertView().showError("Error", subTitle:(error.localizedDescription), closeButtonTitle:"Ok")
 
                     return
                 }
-                
+                SVProgressHUD.dismiss()
+
                                 let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap")
                                          self.present(viewController!, animated: true, completion: nil)
                                          SCLAlertView().showSuccess("Success ", subTitle:"is added successfully", closeButtonTitle:"Ok")
@@ -148,47 +112,106 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
     }
     
    
-     
-       //MARK:- FireBase LoginFacebook
+  
+     //MARK:- FireBase Google
 
-   func LoginFacebook(){
-              let fbLoginManager = LoginManager()
-                     fbLoginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
-                           if let error = error {
-                               print("Failed to login: \(error.localizedDescription)")
-                             
-                               return
-                           }
-                           
-                         guard let accessToken = AccessToken.current else {
-                               print("Failed to get access token")
-                               return
-                           }
-                           
-                         let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
-                           
-                           // Perform login by calling Firebase APIs
-                         Auth.auth().signIn(with: credential, completion: { (user, error) in
-                               if let error = error {
-                                   print("Login error: \(error.localizedDescription)")
-                                   let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
-                                   let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                                   alertController.addAction(okayAction)
-                                   self.present(alertController, animated: true, completion: nil)
-                                   
-                                   return
-                               }
-                               
-                               // Present the main view
-                               if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap") {
-                                   UIApplication.shared.keyWindow?.rootViewController = viewController
-                                   self.dismiss(animated: true, completion: nil)
-                               }
-                               
-                           })
-                           
-                       }
-          }
+     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+         print("Google Sing In didSignInForUser")
+         SVProgressHUD.dismiss()
+
+                  if let error = error {
+                print("Failed to login: \(error.localizedDescription)")
+                    return
+                  }
+
+          guard let authentication = user.authentication else { return }
+          let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                            accessToken: authentication.accessToken)
+          print("Failed to get access token")
+          Auth.auth().signIn(with: credential, completion: { (user, error) in
+                    if let error = error {
+                     SVProgressHUD.dismiss()
+
+                   print("Login error: \(error.localizedDescription)")
+                     let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+                     let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                     alertController.addAction(okayAction)
+                     self.present(alertController, animated: true, completion: nil)
+
+                      return
+                    }
+             SVProgressHUD.dismiss()
+
+             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap") {
+                                         UIApplication.shared.keyWindow?.rootViewController = viewController
+                                         self.dismiss(animated: true, completion: nil)
+                                     }
+                  })
+                }
+
+
+        func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+       GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+         
+        }
+     func sign(_ signIn: GIDSignIn?, present viewController: UIViewController?) {
+
+       // Showing OAuth2 authentication window
+       if let aController = viewController {
+         present(aController, animated: true) {() -> Void in }
+       }
+     }
+     // After Google OAuth2 authentication
+     func sign(_ signIn: GIDSignIn?, dismiss viewController: UIViewController?) {
+       // Close OAuth2 authentication window
+       dismiss(animated: true) {() -> Void in }
+     }
+     
+     
+
+     //MARK:- FireBase LoginFacebook
+     func LoginFacebook(){
+         let fbLoginManager = LoginManager()
+                fbLoginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
+                      if let error = error {
+                          print("Failed to login: \(error.localizedDescription)")
+                        SVProgressHUD.dismiss()
+
+                          return
+                      }
+                      
+                    guard let accessToken = AccessToken.current else {
+                          print("Failed to get access token")
+                          return
+                      }
+                      
+                    let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+                      
+                      // Perform login by calling Firebase APIs
+                    Auth.auth().signIn(with: credential, completion: { (user, error) in
+                          if let error = error {
+                             SVProgressHUD.dismiss()
+
+                              print("Login error: \(error.localizedDescription)")
+                              let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+                              let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                              alertController.addAction(okayAction)
+                              self.present(alertController, animated: true, completion: nil)
+                              
+                              return
+                          }
+                          SVProgressHUD.dismiss()
+
+                          // Present the main view
+                          if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap") {
+                              UIApplication.shared.keyWindow?.rootViewController = viewController
+                              self.dismiss(animated: true, completion: nil)
+                          }
+                          
+                      })
+                      
+                  }
+     }
 }
 
 

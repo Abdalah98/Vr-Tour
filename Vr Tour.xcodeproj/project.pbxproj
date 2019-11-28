@@ -20,6 +20,7 @@
 		65D7D15723860EBE00666180 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D15623860EBE00666180 /* SignUpViewController.swift */; };
 		65D7D15923860F0600666180 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D15823860F0600666180 /* ForgotPasswordViewController.swift */; };
 		65D7D15B23860F5100666180 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D15A23860F5100666180 /* MapViewController.swift */; };
+		65F4064623901DC8002A74A2 /* WelcomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F4064523901DC8002A74A2 /* WelcomeVc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		65D7D15623860EBE00666180 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		65D7D15823860F0600666180 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		65D7D15A23860F5100666180 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		65F4064523901DC8002A74A2 /* WelcomeVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeVc.swift; path = "Vr Tour/Controller/WelcomeVc.swift"; sourceTree = SOURCE_ROOT; };
 		EF1B3553C24948F1B02FB4C5 /* Pods-Vr Tour.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vr Tour.release.xcconfig"; path = "Target Support Files/Pods-Vr Tour/Pods-Vr Tour.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 				65D7D15623860EBE00666180 /* SignUpViewController.swift */,
 				65D7D15823860F0600666180 /* ForgotPasswordViewController.swift */,
 				65D76DA3238BB236001CADB4 /* SideMenuTableVC.swift */,
+				65F4064523901DC8002A74A2 /* WelcomeVc.swift */,
 				65D7D15A23860F5100666180 /* MapViewController.swift */,
 			);
 			path = Controller;
@@ -271,6 +274,7 @@
 				65D7D15B23860F5100666180 /* MapViewController.swift in Sources */,
 				657CD0AF238869EF00592709 /* textfieldsimage.swift in Sources */,
 				65D76DA4238BB236001CADB4 /* SideMenuTableVC.swift in Sources */,
+				65F4064623901DC8002A74A2 /* WelcomeVc.swift in Sources */,
 				65D7D15923860F0600666180 /* ForgotPasswordViewController.swift in Sources */,
 				65D7D13C23860D3A00666180 /* AppDelegate.swift in Sources */,
 				65D7D15723860EBE00666180 /* SignUpViewController.swift in Sources */,

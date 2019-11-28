@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 import SCLAlertView
+import SVProgressHUD
 class ForgotPasswordViewController: UIViewController ,UITextFieldDelegate{
 
     @IBOutlet weak var ForgotPassword: UITextField!
@@ -21,6 +22,8 @@ class ForgotPasswordViewController: UIViewController ,UITextFieldDelegate{
     }
   
     @IBAction func Sendpassword(_ sender: Any) {
+        SVProgressHUD.show()
+
         if ForgotPassword.text!.isEmpty  {
             SCLAlertView().showError("Error", subTitle:"Some field is empty", closeButtonTitle:"Ok")
         } else {
@@ -33,11 +36,14 @@ class ForgotPasswordViewController: UIViewController ,UITextFieldDelegate{
 
     private func resetPassword(email: String){
         Auth.auth().sendPasswordReset(withEmail: email, completion: { (error) in
-            
+            SVProgressHUD.dismiss()
+
             if(error != nil) {
                 SCLAlertView().showError("Error", subTitle:(error?.localizedDescription)!, closeButtonTitle:"Try again")
             }
             else {
+                SVProgressHUD.dismiss()
+
                  let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToLogin")
                 self.present(viewController!, animated: true, completion: nil)
 
