@@ -2,7 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -30,7 +29,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.625674530384-v643f6so3vrjmqppb1ihobbsmer3ngki</string>
+				<string>com.googleusercontent.apps.100786219891-969kopautqdemih262q2k5jk10ottffq</string>
 			</array>
 		</dict>
 	</array>
@@ -40,7 +39,6 @@
 	<string>708033946353037</string>
 	<key>FacebookDisplayName</key>
 	<string>Vr Tour</string>
-  
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
