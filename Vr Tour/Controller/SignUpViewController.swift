@@ -32,7 +32,7 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
     
     
     @IBAction func SignUp(_ sender: Any) {
-        SVProgressHUD.show()
+        SVProgressHUD.show(withStatus: "Loading...")
 
         if Name.text!.isEmpty || Email.text!.isEmpty || Password.text!.isEmpty ||
                     confirmPassword.text!.isEmpty{
@@ -55,7 +55,7 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
     
     
     @IBAction func onClickFacebookLoginButton(_ sender: UIButton) {
-        SVProgressHUD.show()
+        SVProgressHUD.show(withStatus: "Loading...")
 
          LoginFacebook()
       }
@@ -63,7 +63,7 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
     
     
       @IBAction func googleSignIn(sender: AnyObject) {
-        SVProgressHUD.show()
+        SVProgressHUD.show(withStatus: "Loading...")
 
         GIDSignIn.sharedInstance().signIn()
       }

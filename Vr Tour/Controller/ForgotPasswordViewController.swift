@@ -22,7 +22,7 @@ class ForgotPasswordViewController: UIViewController ,UITextFieldDelegate{
     }
   
     @IBAction func Sendpassword(_ sender: Any) {
-        SVProgressHUD.show()
+        SVProgressHUD.show(withStatus: "Loading...")
 
         if ForgotPassword.text!.isEmpty  {
             SCLAlertView().showError("Error", subTitle:"Some field is empty", closeButtonTitle:"Ok")

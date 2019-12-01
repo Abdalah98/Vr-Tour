@@ -30,7 +30,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
     }
     @IBAction func LogIn(_ sender: Any) {
     //  Login()
-        SVProgressHUD.show()
+        SVProgressHUD.show(withStatus: "Loading...")
 
         self.save()
          if emailText.text!.isEmpty || passwordText.text!.isEmpty {
@@ -41,7 +41,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
     }
     
     @IBAction func onClickFacebookLoginButton(_ sender: UIButton) {
-        SVProgressHUD.show()
+        SVProgressHUD.show(withStatus: "Loading...")
 
        LoginFacebook()
     }
@@ -49,7 +49,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
 
 
     @IBAction func onClickGoogleLoginButton(_ sender: Any) {
-        SVProgressHUD.show()
+        SVProgressHUD.show(withStatus: "Loading...")
 
       GIDSignIn.sharedInstance().signIn()
        
