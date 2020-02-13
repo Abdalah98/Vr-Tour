@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		28185555F092B7C01970EAFE /* Pods_Vr_Tour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C80771A2CC7BC09EAA5BBD /* Pods_Vr_Tour.framework */; };
+		657C732C23F4CB7B0010597B /* WelcomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657C732B23F4CB7B0010597B /* WelcomeVc.swift */; };
+		657C733023F4CBAE0010597B /* light_background.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 657C732F23F4CBAE0010597B /* light_background.pdf */; };
+		657C733A23F4D20F0010597B /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657C733923F4D20F0010597B /* WeatherManager.swift */; };
+		657C733C23F4D2310010597B /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657C733B23F4D2310010597B /* WeatherData.swift */; };
+		657C733E23F4D2470010597B /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657C733D23F4D2470010597B /* WeatherModel.swift */; };
+		657C734023F4D2840010597B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657C733F23F4D2840010597B /* WeatherViewController.swift */; };
 		657CD0AF238869EF00592709 /* textfieldsimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657CD0AE238869EF00592709 /* textfieldsimage.swift */; };
 		65BB33AB23947CE9005CB69B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65BB33AA23947CE9005CB69B /* GoogleService-Info.plist */; };
 		65D76DA4238BB236001CADB4 /* SideMenuTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D76DA3238BB236001CADB4 /* SideMenuTableVC.swift */; };
@@ -20,12 +26,17 @@
 		65D7D15723860EBE00666180 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D15623860EBE00666180 /* SignUpViewController.swift */; };
 		65D7D15923860F0600666180 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D15823860F0600666180 /* ForgotPasswordViewController.swift */; };
 		65D7D15B23860F5100666180 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D15A23860F5100666180 /* MapViewController.swift */; };
-		65F4064623901DC8002A74A2 /* WelcomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F4064523901DC8002A74A2 /* WelcomeVc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01C80771A2CC7BC09EAA5BBD /* Pods_Vr_Tour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vr_Tour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		283661E027BC137F52FB0867 /* Pods-Vr Tour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vr Tour.debug.xcconfig"; path = "Target Support Files/Pods-Vr Tour/Pods-Vr Tour.debug.xcconfig"; sourceTree = "<group>"; };
+		657C732B23F4CB7B0010597B /* WelcomeVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeVc.swift; path = "../../../../../Documents/Vr-Tour/Vr Tour/Controller/WelcomeVc.swift"; sourceTree = "<group>"; };
+		657C732F23F4CBAE0010597B /* light_background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = light_background.pdf; sourceTree = "<group>"; };
+		657C733923F4D20F0010597B /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		657C733B23F4D2310010597B /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		657C733D23F4D2470010597B /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		657C733F23F4D2840010597B /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		657CD0AE238869EF00592709 /* textfieldsimage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textfieldsimage.swift; sourceTree = "<group>"; };
 		65BB33AA23947CE9005CB69B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65D76DA3238BB236001CADB4 /* SideMenuTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SideMenuTableVC.swift; path = "Vr Tour/Controller/SideMenuTableVC.swift"; sourceTree = SOURCE_ROOT; };
@@ -40,7 +51,6 @@
 		65D7D15623860EBE00666180 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		65D7D15823860F0600666180 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		65D7D15A23860F5100666180 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		65F4064523901DC8002A74A2 /* WelcomeVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeVc.swift; path = "Vr Tour/Controller/WelcomeVc.swift"; sourceTree = SOURCE_ROOT; };
 		EF1B3553C24948F1B02FB4C5 /* Pods-Vr Tour.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vr Tour.release.xcconfig"; path = "Target Support Files/Pods-Vr Tour/Pods-Vr Tour.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +83,27 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		657C732923F4CAE70010597B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				657C733923F4D20F0010597B /* WeatherManager.swift */,
+				657C733B23F4D2310010597B /* WeatherData.swift */,
+				657C733D23F4D2470010597B /* WeatherModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		657C732A23F4CB090010597B /* login */ = {
+			isa = PBXGroup;
+			children = (
+				65D7D13D23860D3A00666180 /* LoginViewController.swift */,
+				65D7D15623860EBE00666180 /* SignUpViewController.swift */,
+				657C732B23F4CB7B0010597B /* WelcomeVc.swift */,
+				65D7D15823860F0600666180 /* ForgotPasswordViewController.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
 		65D7D12F23860D3A00666180 = {
 			isa = PBXGroup;
 			children = (
@@ -95,12 +126,14 @@
 			isa = PBXGroup;
 			children = (
 				65D7D13B23860D3A00666180 /* AppDelegate.swift */,
+				657C732923F4CAE70010597B /* Model */,
 				65D7D15523860E0600666180 /* Controller */,
 				65D7D15423860DCB00666180 /* View */,
 				65D7D15323860DBA00666180 /* Extension */,
 				65D7D14723860D3D00666180 /* Info.plist */,
 				65BB33AA23947CE9005CB69B /* GoogleService-Info.plist */,
 				65D7D14223860D3D00666180 /* Assets.xcassets */,
+				657C732F23F4CBAE0010597B /* light_background.pdf */,
 			);
 			path = "Vr Tour";
 			sourceTree = "<group>";
@@ -126,12 +159,10 @@
 		65D7D15523860E0600666180 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				65D7D13D23860D3A00666180 /* LoginViewController.swift */,
-				65D7D15623860EBE00666180 /* SignUpViewController.swift */,
-				65D7D15823860F0600666180 /* ForgotPasswordViewController.swift */,
+				657C732A23F4CB090010597B /* login */,
 				65D76DA3238BB236001CADB4 /* SideMenuTableVC.swift */,
-				65F4064523901DC8002A74A2 /* WelcomeVc.swift */,
 				65D7D15A23860F5100666180 /* MapViewController.swift */,
+				657C733F23F4D2840010597B /* WeatherViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -197,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				657C733023F4CBAE0010597B /* light_background.pdf in Resources */,
 				65D7D15023860D7300666180 /* Main.storyboard in Resources */,
 				65BB33AB23947CE9005CB69B /* GoogleService-Info.plist in Resources */,
 				65D7D14F23860D7300666180 /* LaunchScreen.storyboard in Resources */,
@@ -272,12 +304,16 @@
 			files = (
 				65D7D13E23860D3A00666180 /* LoginViewController.swift in Sources */,
 				65D7D15B23860F5100666180 /* MapViewController.swift in Sources */,
+				657C733A23F4D20F0010597B /* WeatherManager.swift in Sources */,
 				657CD0AF238869EF00592709 /* textfieldsimage.swift in Sources */,
+				657C734023F4D2840010597B /* WeatherViewController.swift in Sources */,
 				65D76DA4238BB236001CADB4 /* SideMenuTableVC.swift in Sources */,
-				65F4064623901DC8002A74A2 /* WelcomeVc.swift in Sources */,
+				657C733C23F4D2310010597B /* WeatherData.swift in Sources */,
+				657C732C23F4CB7B0010597B /* WelcomeVc.swift in Sources */,
 				65D7D15923860F0600666180 /* ForgotPasswordViewController.swift in Sources */,
 				65D7D13C23860D3A00666180 /* AppDelegate.swift in Sources */,
 				65D7D15723860EBE00666180 /* SignUpViewController.swift in Sources */,
+				657C733E23F4D2470010597B /* WeatherModel.swift in Sources */,
 				65D7D15223860DA900666180 /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

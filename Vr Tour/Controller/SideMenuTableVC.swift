@@ -15,7 +15,7 @@ class SideMenuTableVC: UITableViewController {
     @IBOutlet var sidemenu: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        sidemenu.separatorColor = .clear
+     sidemenu.separatorColor = .black
 
     }
 
@@ -32,10 +32,15 @@ class SideMenuTableVC: UITableViewController {
                      }
     }
     
+    @IBAction func GetPressedWeather(_ sender: UIButton) {
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToWeather")
+                       present(viewController!, animated: true, completion: nil)
+    }
+    
   override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
       let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 40))
       footerView.backgroundColor = .cyan
-      
+
       return footerView
   }
 
