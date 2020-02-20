@@ -37,6 +37,12 @@ class SideMenuTableVC: UITableViewController {
                        present(viewController!, animated: true, completion: nil)
     }
     
+    
+    @IBAction func CurrencyExchange(_ sender: UIButton) {
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "goCurrencyExchange")
+        present(viewController!, animated: true, completion: nil)
+        
+    }
   override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
       let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 40))
       footerView.backgroundColor = .cyan

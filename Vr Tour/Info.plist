@@ -4,6 +4,14 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Would like to Accsees Speech Recognition</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Apple’s speech recognition servers.</string>
+	<key>NSLocationWhenInUseUsageDescription - 2</key>
+	<string>You needed accept to allow acsses map</string>
+	<key>NSLocationWhenInUseUsageDescription - 3</key>
+	<string>You needed accept to allow acsses map</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
