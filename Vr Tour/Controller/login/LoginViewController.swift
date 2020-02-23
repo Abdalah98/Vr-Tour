@@ -25,6 +25,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
      GIDSignIn.sharedInstance()?.presentingViewController = self
  
         GIDSignIn.sharedInstance().delegate = self
+        self.hideKeyboardWhenTappedAround()
 
         self.check()
     }
@@ -35,6 +36,8 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
         self.save()
          if emailText.text!.isEmpty || passwordText.text!.isEmpty {
                     SCLAlertView().showError("Error", subTitle:"Some field is empty", closeButtonTitle:"Ok")
+            SVProgressHUD.dismiss()
+
                } else {
             logUserIn(withEmail: emailText.text!, password: passwordText.text!)
     }
@@ -152,13 +155,16 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
         let fbLoginManager = LoginManager()
                fbLoginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
                      if let error = error {
+                        SVProgressHUD.dismiss()
+
                          print("Failed to login: \(error.localizedDescription)")
-                       SVProgressHUD.dismiss()
 
                          return
                      }
                      
                    guard let accessToken = AccessToken.current else {
+                    SVProgressHUD.dismiss()
+
                          print("Failed to get access token")
                          return
                      }

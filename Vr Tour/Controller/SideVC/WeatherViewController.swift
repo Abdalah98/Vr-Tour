@@ -23,7 +23,8 @@ class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
+
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
@@ -42,34 +43,46 @@ class WeatherViewController: UIViewController {
 extension WeatherViewController: UITextFieldDelegate {
     
     @IBAction func searchPressed(_ sender: UIButton) {
-        searchTextField.endEditing(true)
+        if searchTextField.text != "" {
+                        searchTextField.endEditing(true)
+
+                    } else {
+            
+                        searchTextField.placeholder = "Type something"
+                        
+                    }
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchTextField.endEditing(true)
+        searchTextField.resignFirstResponder()
         return true
     }
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if textField.text != "" {
-            return true
-        } else {
-            textField.placeholder = "Type something"
-            return false
-        }
-    }
-    
+
+//    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+//        if textField.text != "" {
+//            searchTextField.resignFirstResponder()
+//
+//            return true
+//        } else {
+//
+//            textField.placeholder = "Type something"
+//            return false
+//        }
+//    }
+
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
+
         if let city = searchTextField.text {
             weatherManager.fetchWeather(cityName: city)
         }
-        
-        searchTextField.text = ""
-        
-    }
-}
 
+        searchTextField.text = ""
+
+    }
+
+}
 //MARK: - WeatherManagerDelegate
 
 

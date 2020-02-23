@@ -17,8 +17,10 @@ class ForgotPasswordViewController: UIViewController ,UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.title = "ForgotPassword"
+        self.hideKeyboardWhenTappedAround()
 
-        
+        self.hideKeyboardWhenTappedAround()
+
     }
   
     @IBAction func Sendpassword(_ sender: Any) {
@@ -26,6 +28,8 @@ class ForgotPasswordViewController: UIViewController ,UITextFieldDelegate{
 
         if ForgotPassword.text!.isEmpty  {
             SCLAlertView().showError("Error", subTitle:"Some field is empty", closeButtonTitle:"Ok")
+            SVProgressHUD.dismiss()
+
         } else {
             resetPassword(email: ForgotPassword.text!)
         }

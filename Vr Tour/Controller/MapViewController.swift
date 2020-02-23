@@ -67,6 +67,8 @@ class MapViewController: UIViewController{
   }
     override func viewDidLoad() {
               super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+
               checkLocationServices()
         searchBar.delegate = self
 

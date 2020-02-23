@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import SVProgressHUD
+import SCLAlertView
 class CurrencyExchangeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
   
@@ -50,10 +51,20 @@ class CurrencyExchangeViewController: UIViewController, UIPickerViewDelegate, UI
        //BUTTON
        @IBAction func action(_ sender: AnyObject)
        {
-           if (input.text != "")
-           {
-               output.text = ("Currency Value : \(String(Double(input.text!)! * activeCurrency))")
-           }
+            SVProgressHUD.show(withStatus: "Loading...")
+
+        if (input.text!.isEmpty){
+             SCLAlertView().showError("Error", subTitle:"Some field is empty add number in text to change manoy", closeButtonTitle:"Ok")
+            SVProgressHUD.dismiss()
+        }else{
+
+            output.text = ("Currency Value : \(String(Double(input.text!)! * activeCurrency))")
+        
+            SVProgressHUD.dismiss()
+
+        }
+
+
        }
        
        
@@ -61,7 +72,8 @@ class CurrencyExchangeViewController: UIViewController, UIPickerViewDelegate, UI
        override func viewDidLoad()
        {
            super.viewDidLoad()
-           
+           self.hideKeyboardWhenTappedAround()
+
            //GETTING DATA
            let url = URL(string: "http://data.fixer.io/api/latest?access_key=f95707d8f158119001743621b95da57c")
            

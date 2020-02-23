@@ -618,7 +618,10 @@
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="0.0"/>
+                                                            <real key="value" value="11"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
@@ -636,7 +639,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i57-QY-6ec">
-                                                    <rect key="frame" x="74" y="2" width="164" height="33"/>
+                                                    <rect key="frame" x="74" y="5" width="164" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
@@ -645,7 +648,10 @@
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="0.0"/>
+                                                            <real key="value" value="11"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
@@ -653,7 +659,7 @@
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dollarsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="16e-ol-d2f">
-                                                    <rect key="frame" x="20" y="0.5" width="46" height="35"/>
+                                                    <rect key="frame" x="20" y="4" width="46" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </imageView>
@@ -667,11 +673,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="escape" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vYU-nP-zOu">
-                                                    <rect key="frame" x="20" y="4.5" width="46" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOH-Rx-CA1">
                                                     <rect key="frame" x="74" y="5" width="79" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -682,13 +683,21 @@
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="0.0"/>
+                                                            <real key="value" value="11"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="signOut:" destination="dw5-cp-1wb" eventType="touchUpInside" id="3HR-sR-AbM"/>
                                                     </connections>
                                                 </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="escape" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vYU-nP-zOu">
+                                                    <rect key="frame" x="20" y="5" width="46" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1100,19 +1109,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6Z-pJ-smb">
-                                <rect key="frame" x="0.0" y="35" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Currency Exchange" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="69U-3L-e9d">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="O3O-E5-264">
-                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <connections>
-                                                <action selector="cancelButton:" destination="ieV-2C-CoS" id="hWv-Zb-BJr"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T76-W0-4iS">
                                 <rect key="frame" x="87" y="529" width="240" height="50"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1132,6 +1128,19 @@
                                     <action selector="action:" destination="ieV-2C-CoS" eventType="touchUpInside" id="fey-Te-pHk"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6Z-pJ-smb">
+                                <rect key="frame" x="0.0" y="26" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Currency Exchange" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="69U-3L-e9d">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="O3O-E5-264">
+                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <connections>
+                                                <action selector="cancelButton:" destination="ieV-2C-CoS" id="hWv-Zb-BJr"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1139,10 +1148,10 @@
                             <constraint firstItem="oEZ-5G-c9L" firstAttribute="leading" secondItem="hwc-gk-eem" secondAttribute="leading" constant="20" id="Beg-OA-CDJ"/>
                             <constraint firstItem="T76-W0-4iS" firstAttribute="top" secondItem="wV8-sQ-vdk" secondAttribute="bottom" constant="63" id="Bt9-bh-glA"/>
                             <constraint firstItem="wV8-sQ-vdk" firstAttribute="top" secondItem="oEZ-5G-c9L" secondAttribute="bottom" constant="25" id="EKR-vD-Q81"/>
-                            <constraint firstItem="ggl-2p-oN5" firstAttribute="top" secondItem="G6Z-pJ-smb" secondAttribute="bottom" constant="36" id="Rpt-c8-QQO"/>
+                            <constraint firstItem="ggl-2p-oN5" firstAttribute="top" secondItem="G6Z-pJ-smb" secondAttribute="bottom" constant="45" id="Rpt-c8-QQO"/>
                             <constraint firstItem="G6Z-pJ-smb" firstAttribute="leading" secondItem="hwc-gk-eem" secondAttribute="leading" id="Wgj-qA-3Xk"/>
                             <constraint firstItem="T76-W0-4iS" firstAttribute="centerX" secondItem="wV8-sQ-vdk" secondAttribute="centerX" id="XMv-MI-dKY"/>
-                            <constraint firstItem="G6Z-pJ-smb" firstAttribute="top" secondItem="bc2-3D-0ae" secondAttribute="top" constant="35" id="eDK-9O-Q6p"/>
+                            <constraint firstItem="G6Z-pJ-smb" firstAttribute="top" secondItem="bc2-3D-0ae" secondAttribute="top" constant="26" id="eDK-9O-Q6p"/>
                             <constraint firstItem="T76-W0-4iS" firstAttribute="leading" secondItem="hwc-gk-eem" secondAttribute="leading" constant="87" id="eta-Ek-mnG"/>
                             <constraint firstItem="ggl-2p-oN5" firstAttribute="leading" secondItem="hwc-gk-eem" secondAttribute="leading" constant="118" id="fNl-HR-F0a"/>
                             <constraint firstItem="wV8-sQ-vdk" firstAttribute="leading" secondItem="hwc-gk-eem" secondAttribute="leading" constant="73" id="kN5-9z-O2T"/>

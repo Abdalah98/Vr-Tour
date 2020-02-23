@@ -23,7 +23,8 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-      
+      self.hideKeyboardWhenTappedAround()
+
  GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
   GIDSignIn.sharedInstance()?.presentingViewController = self
       GIDSignIn.sharedInstance().delegate = self
@@ -37,9 +38,13 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
         if Name.text!.isEmpty || Email.text!.isEmpty || Password.text!.isEmpty ||
                     confirmPassword.text!.isEmpty{
                       SCLAlertView().showError("Error", subTitle:"Some field is empty", closeButtonTitle:"Ok")
+            SVProgressHUD.dismiss()
+
         }else{
             if ((self.Password.text?.elementsEqual(self.confirmPassword.text!))! != true)
             {  SCLAlertView().showError("Error", subTitle:"Passwords do not match", closeButtonTitle:"Ok")
+                SVProgressHUD.dismiss()
+
                 
             }else{
         createUser(withEmail: Email.text!, password: Password.text!, username: Name.text!)
@@ -174,13 +179,16 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
          let fbLoginManager = LoginManager()
                 fbLoginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
                       if let error = error {
-                          print("Failed to login: \(error.localizedDescription)")
                         SVProgressHUD.dismiss()
+
+                          print("Failed to login: \(error.localizedDescription)")
 
                           return
                       }
                       
                     guard let accessToken = AccessToken.current else {
+                        SVProgressHUD.dismiss()
+
                           print("Failed to get access token")
                           return
                       }
