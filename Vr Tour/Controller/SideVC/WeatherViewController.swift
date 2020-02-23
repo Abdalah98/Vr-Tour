@@ -32,6 +32,9 @@ class WeatherViewController: UIViewController {
         searchTextField.delegate = self
     }
 
+    @IBAction func Cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 //MARK: - UITextFieldDelegate
