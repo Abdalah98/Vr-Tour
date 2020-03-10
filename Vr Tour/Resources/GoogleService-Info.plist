@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>100786219891-969kopautqdemih262q2k5jk10ottffq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.100786219891-969kopautqdemih262q2k5jk10ottffq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB8THR3LHJKd8tP1fjcRs_iLy1s3PwgGb8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>100786219891</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Abdalah.Vr-Tour</string>
+	<key>PROJECT_ID</key>
+	<string>tourist-tour-b5538</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tourist-tour-b5538.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:100786219891:ios:29c87d8382cbe028a27306</string>
+	<key>DATABASE_URL</key>
+	<string>https://tourist-tour-b5538.firebaseio.com</string>
+</dict>
+</plist>

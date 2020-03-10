@@ -15,8 +15,10 @@ import FBSDKLoginKit
 import FirebaseDatabase
 import SVProgressHUD
 class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDelegate{
+    
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
+    
       let loginButton = FBLoginButton()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
 
         self.check()
     }
+    //MARK: - GetPressedLogIn
     @IBAction func LogIn(_ sender: Any) {
     //  Login()
         SVProgressHUD.show(withStatus: "Loading...")
@@ -43,6 +46,10 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
     }
     }
     
+    
+    
+    //MARK: - GetPressedLogInWithFaceBook
+
     @IBAction func onClickFacebookLoginButton(_ sender: UIButton) {
         SVProgressHUD.show(withStatus: "Loading...")
 
@@ -50,6 +57,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
     }
     
 
+    //MARK: - GetPressedLogInWithGoogle
 
     @IBAction func onClickGoogleLoginButton(_ sender: Any) {
         SVProgressHUD.show(withStatus: "Loading...")
@@ -57,6 +65,8 @@ class LoginViewController: UIViewController ,UITextFieldDelegate , GIDSignInDele
       GIDSignIn.sharedInstance().signIn()
        
     }
+    
+    //MARK: - saveTextField in userdefaults
     func save()
     {
         UserDefaults.standard.setValue(emailText.text!, forKey: "Name")

@@ -32,6 +32,8 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
     
     
     
+    //MARK: - GetPressedSignUp
+    
     @IBAction func SignUp(_ sender: Any) {
         SVProgressHUD.show(withStatus: "Loading...")
 
@@ -57,7 +59,8 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
     
     
     
-    
+    //MARK: - GetPressedSignUpWithFacebook
+
     
     @IBAction func onClickFacebookLoginButton(_ sender: UIButton) {
         SVProgressHUD.show(withStatus: "Loading...")
@@ -66,6 +69,8 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
       }
       
     
+    //MARK: - GetPressedSignUpWithGoogleFacebook
+
     
       @IBAction func googleSignIn(sender: AnyObject) {
         SVProgressHUD.show(withStatus: "Loading...")
@@ -223,20 +228,4 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
 }
 
 
-
-extension SignUpViewController:UITextFieldDelegate {
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        
-        
-        return true
-    }
-  
-    
-    
-}
 

@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 import SCLAlertView
-class CurrencyExchangeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class CurrencyExchangeViewController: UIViewController {
 
   
     var myCurrency:[String] = []
@@ -22,52 +22,8 @@ class CurrencyExchangeViewController: UIViewController, UIPickerViewDelegate, UI
        @IBOutlet weak var pickerView: UIPickerView!
        @IBOutlet weak var output: UILabel!
        
-       //CREATING PICKER VIEW
-       func numberOfComponents(in pickerView: UIPickerView) -> Int
-       {
-           return 1
-       }
-       
-       func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
-       {
-          
+    
 
-           return myCurrency.count
-       }
-       
-       func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
-       {
-          
-
-           return myCurrency[row]
-       }
-       
-       func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
-       {print(  activeCurrency = myValues[row])
-
-           activeCurrency = myValues[row]
-       }
-       
-       //BUTTON
-       @IBAction func action(_ sender: AnyObject)
-       {
-            SVProgressHUD.show(withStatus: "Loading...")
-
-        if (input.text!.isEmpty){
-             SCLAlertView().showError("Error", subTitle:"Some field is empty add number in text to change manoy", closeButtonTitle:"Ok")
-            SVProgressHUD.dismiss()
-        }else{
-
-            output.text = ("Currency Value : \(String(Double(input.text!)! * activeCurrency))")
-        
-            SVProgressHUD.dismiss()
-
-        }
-
-
-       }
-       
-       
 
        override func viewDidLoad()
        {
@@ -113,11 +69,63 @@ class CurrencyExchangeViewController: UIViewController, UIPickerViewDelegate, UI
            }
            task.resume()
        }
+    
+    //MARK: - GetCurrency
+    @IBAction func action(_ sender: AnyObject)
+    {
+         SVProgressHUD.show(withStatus: "Loading...")
 
+     if (input.text!.isEmpty){
+          SCLAlertView().showError("Error", subTitle:"Some field is empty add number in text to change manoy", closeButtonTitle:"Ok")
+         SVProgressHUD.dismiss()
+     }else{
+
+         output.text = ("Currency Value : \(String(Double(input.text!)! * activeCurrency))")
      
+         SVProgressHUD.dismiss()
+
+     }
+
+
+    }
+    
+    
+     
+    //MARK: - CancelButton
 
        @IBAction func cancelButton(_ sender: Any) {
            dismiss(animated: true, completion: nil)
        }
        
+}
+
+
+
+//MARK: - PickerView
+extension CurrencyExchangeViewController : UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int
+         {
+             return 1
+         }
+         
+         func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+         {
+            
+
+             return myCurrency.count
+         }
+         
+         func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+         {
+            
+
+             return myCurrency[row]
+         }
+         
+         func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+         {
+
+             activeCurrency = myValues[row]
+         }
+         
 }

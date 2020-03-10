@@ -9,14 +9,11 @@ target 'Vr Tour' do
 
 pod 'IQKeyboardManagerSwift'
 pod 'SCLAlertView'
-pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'SideMenu', '~> 6.0'
-pod 'Firebase/Core'
 pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
 pod 'GoogleSignIn'
-pod 'Firebase/Database'
 pod 'SVProgressHUD'
-
+pod 'Firebase/Database'
 end

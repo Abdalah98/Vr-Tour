@@ -19,10 +19,11 @@ class ForgotPasswordViewController: UIViewController ,UITextFieldDelegate{
         navigationController?.title = "ForgotPassword"
         self.hideKeyboardWhenTappedAround()
 
-        self.hideKeyboardWhenTappedAround()
 
     }
   
+    
+    //MARK: - PressedSendpassword
     @IBAction func Sendpassword(_ sender: Any) {
         SVProgressHUD.show(withStatus: "Loading...")
 
@@ -36,7 +37,7 @@ class ForgotPasswordViewController: UIViewController ,UITextFieldDelegate{
     }
     
     
-    //MARK:- FireBase
+    //MARK:- FireBaseResetPassword
 
     private func resetPassword(email: String){
         Auth.auth().sendPasswordReset(withEmail: email, completion: { (error) in
