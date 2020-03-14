@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1958" y="-313"/>
+            <point key="canvasLocation" x="2884" y="-299"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="rhL-bn-jeK">
@@ -104,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlJ-7t-ted">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9T6-qv-UqL">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1096"/>
@@ -282,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LsC-3y-eiS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2784" y="-788"/>
+            <point key="canvasLocation" x="3709" y="-773"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="j4l-gl-C9K">
@@ -293,7 +293,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="955-BB-Lv6">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Coy-qT-O1X">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1096"/>
@@ -493,7 +493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CL9-Mh-iuD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2784" y="132"/>
+            <point key="canvasLocation" x="3709" y="147"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="J6h-ER-lZc">
@@ -504,13 +504,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6D-Ay-I0U">
-                                <rect key="frame" x="106.33333333333333" y="160" width="201.33333333333337" height="28.666666666666657"/>
+                                <rect key="frame" x="106.33333333333333" y="116.00000000000001" width="201.33333333333337" height="28.666666666666671"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="541-Zi-gua">
-                                <rect key="frame" x="90" y="358" width="234" height="50"/>
+                                <rect key="frame" x="90" y="314" width="234" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMq-K3-Xp2">
                                         <rect key="frame" x="0.0" y="0.0" width="234" height="50"/>
@@ -534,7 +534,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rD0-Nx-W9Z">
-                                <rect key="frame" x="5" y="243" width="404" height="50"/>
+                                <rect key="frame" x="5" y="199" width="404" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Enter Your Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1q-KX-WvH" customClass="DesignableUITextField" customModule="Vr_Tour" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="404" height="50"/>
@@ -583,7 +583,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6W-Ct-NI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3606" y="-788"/>
+            <point key="canvasLocation" x="4532" y="-773"/>
         </scene>
         <!--Side menu-->
         <scene sceneID="MqF-MK-EcT">
@@ -743,7 +743,42 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="instagram" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vUC-oY-SzJ">
+                                                    <rect key="frame" x="20" y="5" width="46" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVg-xH-IGX">
+                                                    <rect key="frame" x="74" y="6" width="100" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <state key="normal" title="Historygram">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="11"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="Historygram:" destination="dw5-cp-1wb" eventType="touchUpInside" id="Dtg-Ue-hi5"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="AqX-9T-GAA">
+                                        <rect key="frame" x="0.0" y="255" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AqX-9T-GAA" id="wsM-ZD-Fbz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNz-4w-niC">
                                                     <rect key="frame" x="74" y="5" width="79" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -760,10 +795,10 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="signOut:" destination="dw5-cp-1wb" eventType="touchUpInside" id="cC0-it-nh9"/>
+                                                        <action selector="signOut:" destination="dw5-cp-1wb" eventType="touchUpInside" id="RC5-IF-Nq2"/>
                                                     </connections>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="escape" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vUC-oY-SzJ">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="escape" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PX8-sG-dCd">
                                                     <rect key="frame" x="20" y="5" width="46" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -786,18 +821,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScD-AT-AzV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8021.739130434783" y="-628.125"/>
+            <point key="canvasLocation" x="8090" y="-500"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="5o4-MT-41h">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="A0S-dO-3do" customClass="MapViewController" customModule="Vr_Tour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GoToMap" modalPresentationStyle="fullScreen" id="A0S-dO-3do" customClass="MapViewController" customModule="Vr_Tour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="agP-FU-meL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFk-gr-FR5">
-                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
                                 <color key="tintColor" red="0.72541010380000004" green="0.72553640600000002" blue="0.72540217640000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="A0S-dO-3do" id="Qkh-VM-K0N"/>
@@ -847,7 +882,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjy-d8-pno">
-                                <rect key="frame" x="338" y="731" width="66" height="47.666666666666629"/>
+                                <rect key="frame" x="338" y="780" width="66" height="47.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="66" id="RXF-Xb-8gT"/>
                                     <constraint firstAttribute="height" constant="49" id="zVY-Cc-tuf"/>
@@ -889,7 +924,7 @@
         <!--Historygram View Controller-->
         <scene sceneID="PpE-ar-dT1">
             <objects>
-                <viewController id="odb-f6-LhC" customClass="HistorygramViewController" customModule="Vr_Tour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goHistoryGram" id="odb-f6-LhC" customClass="HistorygramViewController" customModule="Vr_Tour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OaT-4y-3vL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -908,7 +943,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jMT-dY-4UF">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellOfHistorygram" rowHeight="443" id="18E-nG-lDX" customClass="HistorygramTableViewCell" customModule="Vr_Tour" customModuleProvider="target">
@@ -959,11 +994,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jqz-64-jiV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="pointed-star" selectedImage="pointed-star" id="XTj-eg-mUX"/>
+                    <tabBarItem key="tabBarItem" title="" image="pointed-star" id="XTj-eg-mUX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdP-sM-rJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5487" y="464"/>
+            <point key="canvasLocation" x="10554" y="-500"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="FDm-6R-zWZ">
@@ -978,7 +1013,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rMM-Mh-xtP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8022" y="44"/>
+            <point key="canvasLocation" x="8091" y="415"/>
         </scene>
         <!--About Vr View Controller-->
         <scene sceneID="gOK-bc-Vh5">
@@ -1103,7 +1138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGN-Mn-1ZJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7206" y="58"/>
+            <point key="canvasLocation" x="7146" y="415"/>
         </scene>
         <!--Location Vr TableVC-->
         <scene sceneID="2DM-Ub-rLz">
@@ -1187,29 +1222,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tp-60-dON" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7207" y="-628"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="v7x-yT-nfq">
-            <objects>
-                <tabBarController storyboardIdentifier="GoToMap" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="iug-Ht-xeW" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Pke-gr-HQN"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="as0-kC-Xb5">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <color key="selectedImageTintColor" cocoaTouchSystemColor="darkTextColor"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="A0S-dO-3do" kind="relationship" relationship="viewControllers" id="0iN-Ne-Cxz"/>
-                        <segue destination="odb-f6-LhC" kind="relationship" relationship="viewControllers" id="pzz-d4-35U"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RTk-bA-Xv8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5488" y="-313"/>
+            <point key="canvasLocation" x="7265" y="-500"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sTL-7b-58W">
@@ -1231,7 +1244,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2sJ-XE-62a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1038" y="-313"/>
+            <point key="canvasLocation" x="1964" y="-299"/>
         </scene>
         <!--Weather View Controller-->
         <scene sceneID="8nL-iv-BRG">
@@ -1380,7 +1393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Eo-CM-G6K" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8843.4782608695659" y="-628.125"/>
+            <point key="canvasLocation" x="8926" y="-500"/>
         </scene>
         <!--Currency Exchange View Controller-->
         <scene sceneID="fSG-jp-wJ6">
@@ -1480,7 +1493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwC-za-ijB" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9642" y="-628"/>
+            <point key="canvasLocation" x="9736" y="-500"/>
         </scene>
         <!--Nearby Place Table View-->
         <scene sceneID="i3m-36-zvh">
@@ -1558,6 +1571,7 @@
         <image name="face" width="240" height="50"/>
         <image name="favorite" width="21.333333969116211" height="21.333333969116211"/>
         <image name="google" width="240" height="50"/>
+        <image name="instagram" width="21.333333969116211" height="21.333333969116211"/>
         <image name="light_background" width="662" height="662"/>
         <image name="location" catalog="system" width="64" height="56"/>
         <image name="location.circle" catalog="system" width="64" height="60"/>
@@ -1577,8 +1591,8 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0iN-Ne-Cxz"/>
+        <segue reference="LVz-NB-JPo"/>
         <segue reference="goe-i4-9Rz"/>
-        <segue reference="Xb0-ko-XHa"/>
+        <segue reference="wkc-zh-dP1"/>
     </inferredMetricsTieBreakers>
 </document>

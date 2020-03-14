@@ -61,6 +61,7 @@ class CurrencyExchangeViewController: UIViewController {
                            
                        }
                    }
+                
                }
                DispatchQueue.main.async {
                                self.pickerView.reloadAllComponents()

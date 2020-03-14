@@ -55,6 +55,8 @@ extension nearbyPlaceTableView : UITableViewDelegate , UITableViewDataSource{
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
                  if segue.identifier == "showMap" {
                      let destinationController = segue.destination as! MapViewController
+                    
+
                      if let indexPath = nearvyPalceTVC.indexPathForSelectedRow {
                          destinationController.locationNearby = ArrayNerbyPalces[indexPath.row]
                      }else{

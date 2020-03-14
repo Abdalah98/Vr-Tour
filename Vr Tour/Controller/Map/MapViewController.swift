@@ -52,6 +52,9 @@ class MapViewController: UIViewController{
         shownearby()
 
         convertAddressStringtoLocation()
+       
+                     
+   
     }
     override func viewWillAppear(_ animated: Bool) {
               navigationController?.isNavigationBarHidden = true
