@@ -112,13 +112,13 @@ class MapViewController: UIViewController{
                            }
                return
                }
-                  
+
                let route = routeResponse.routes[0]
                    let rect = route.polyline.boundingMapRect
                    self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
                    self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.aboveRoads) }
     }
-    
+    //showAboutVR
 }
 
 
@@ -297,11 +297,18 @@ func convertAddressStringtoLocation()
             renderer.lineWidth = 3.0
             return renderer
         }
+    //MARK: - AccessoryControlTappedshowAboutVR
           func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-              performSegue(withIdentifier: "showVRdetaiels", sender: view)
+              performSegue(withIdentifier: "showAboutVR", sender: view)
           }
      
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showAboutVR"{
+            let destination = segue.destination as! AboutVrViewController
+            destination.documentation = showLocationByVR?.AboutPlace ?? ""
+            destination.iamgeShow = UIImage(named: showLocationByVR?.image ?? "")
+        }
+    }
         @IBAction func showDirection(sender: AnyObject) {
              guard let currentPlacemark = currentPlacemark else {
                     return
@@ -329,6 +336,7 @@ func convertAddressStringtoLocation()
     }
 
         func shownearby(){
+            
             let searchRequest = MKLocalSearch.Request()
                         // searchRequest.naturalLanguageQuery = locationMap.type
                    searchRequest.naturalLanguageQuery = locationNearby?.palces
@@ -479,7 +487,7 @@ extension MapViewController :SFSpeechRecognizerDelegate{
             if result != nil {
                 
                 self.searchBar.text = result?.bestTranscription.formattedString
-                print("print voce\(result?.bestTranscription.formattedString)")
+         //       print("print voce\(result?.bestTranscription.formattedString)")
                 isFinal = (result?.isFinal)!
                 
             }

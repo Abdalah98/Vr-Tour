@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		28185555F092B7C01970EAFE /* Pods_Vr_Tour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C80771A2CC7BC09EAA5BBD /* Pods_Vr_Tour.framework */; };
+		6537ACAC241A20680006B692 /* AbourVrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6537ACAB241A20680006B692 /* AbourVrViewController.swift */; };
 		6564F23124030EA80055EB1B /* closeKeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6564F23024030EA80055EB1B /* closeKeyBoard.swift */; };
 		6566D67A2414773900DD32F2 /* WelcomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6566D6792414773900DD32F2 /* WelcomeVc.swift */; };
 		6566D67E2414776E00DD32F2 /* SideMenuTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6566D67D2414776E00DD32F2 /* SideMenuTableVC.swift */; };
@@ -19,6 +20,8 @@
 		657C733E23F4D2470010597B /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657C733D23F4D2470010597B /* WeatherModel.swift */; };
 		657C734023F4D2840010597B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657C733F23F4D2840010597B /* WeatherViewController.swift */; };
 		657CD0AF238869EF00592709 /* textfieldsimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657CD0AE238869EF00592709 /* textfieldsimage.swift */; };
+		658486AC241C4BAB00638B7E /* HistorygramTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658486AB241C4BAB00638B7E /* HistorygramTableViewController.swift */; };
+		658486AE241C4BD100638B7E /* HistorygramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658486AD241C4BD100638B7E /* HistorygramTableViewCell.swift */; };
 		65C7EBD8241808D800F41BA5 /* NearbyPalce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7EBD7241808D800F41BA5 /* NearbyPalce.swift */; };
 		65D7D13C23860D3A00666180 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D13B23860D3A00666180 /* AppDelegate.swift */; };
 		65D7D13E23860D3A00666180 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D13D23860D3A00666180 /* LoginViewController.swift */; };
@@ -36,6 +39,7 @@
 /* Begin PBXFileReference section */
 		01C80771A2CC7BC09EAA5BBD /* Pods_Vr_Tour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vr_Tour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		283661E027BC137F52FB0867 /* Pods-Vr Tour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vr Tour.debug.xcconfig"; path = "Target Support Files/Pods-Vr Tour/Pods-Vr Tour.debug.xcconfig"; sourceTree = "<group>"; };
+		6537ACAB241A20680006B692 /* AbourVrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbourVrViewController.swift; sourceTree = "<group>"; };
 		6564F23024030EA80055EB1B /* closeKeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = closeKeyBoard.swift; sourceTree = "<group>"; };
 		6566D6792414773900DD32F2 /* WelcomeVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeVc.swift; path = "../../../../vr/Vr-Tour/Vr Tour/Controller/login/WelcomeVc.swift"; sourceTree = "<group>"; };
 		6566D67D2414776E00DD32F2 /* SideMenuTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenuTableVC.swift; path = "../../../../vr/Vr-Tour/Vr Tour/Controller/SideVC/SideMenuTableVC.swift"; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 		657C733D23F4D2470010597B /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		657C733F23F4D2840010597B /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		657CD0AE238869EF00592709 /* textfieldsimage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textfieldsimage.swift; sourceTree = "<group>"; };
+		658486AB241C4BAB00638B7E /* HistorygramTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorygramTableViewController.swift; sourceTree = "<group>"; };
+		658486AD241C4BD100638B7E /* HistorygramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorygramTableViewCell.swift; sourceTree = "<group>"; };
 		65C7EBD7241808D800F41BA5 /* NearbyPalce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPalce.swift; sourceTree = "<group>"; };
 		65D7D13823860D3A00666180 /* Vr Tour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vr Tour.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D7D13B23860D3A00666180 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +99,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6537ACA8241A16510006B692 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				65D7D15A23860F5100666180 /* MapViewController.swift */,
+				6537ACAB241A20680006B692 /* AbourVrViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		6566D67F241479CA00DD32F2 /* location */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +135,15 @@
 				65D7D15823860F0600666180 /* ForgotPasswordViewController.swift */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		658486AA241C4B7400638B7E /* Historygram */ = {
+			isa = PBXGroup;
+			children = (
+				658486AB241C4BAB00638B7E /* HistorygramTableViewController.swift */,
+				658486AD241C4BD100638B7E /* HistorygramTableViewCell.swift */,
+			);
+			path = Historygram;
 			sourceTree = "<group>";
 		};
 		65C13B0123FC882500CB102F /* SideVC */ = {
@@ -187,9 +211,10 @@
 		65D7D15523860E0600666180 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				658486AA241C4B7400638B7E /* Historygram */,
+				6537ACA8241A16510006B692 /* Map */,
 				657C732A23F4CB090010597B /* login */,
 				65C13B0123FC882500CB102F /* SideVC */,
-				65D7D15A23860F5100666180 /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -350,12 +375,15 @@
 			files = (
 				6566D67E2414776E00DD32F2 /* SideMenuTableVC.swift in Sources */,
 				65D7D13E23860D3A00666180 /* LoginViewController.swift in Sources */,
+				6537ACAC241A20680006B692 /* AbourVrViewController.swift in Sources */,
 				65D7D15B23860F5100666180 /* MapViewController.swift in Sources */,
 				657C733A23F4D20F0010597B /* WeatherManager.swift in Sources */,
+				658486AE241C4BD100638B7E /* HistorygramTableViewCell.swift in Sources */,
 				657CD0AF238869EF00592709 /* textfieldsimage.swift in Sources */,
 				657C734023F4D2840010597B /* WeatherViewController.swift in Sources */,
 				657C733C23F4D2310010597B /* WeatherData.swift in Sources */,
 				657402772402170F005DD3AD /* CurrencyExchangeViewController.swift in Sources */,
+				658486AC241C4BAB00638B7E /* HistorygramTableViewController.swift in Sources */,
 				65D7D15923860F0600666180 /* ForgotPasswordViewController.swift in Sources */,
 				6564F23124030EA80055EB1B /* closeKeyBoard.swift in Sources */,
 				65DC109E24179D21007E8374 /* nearbyPlaceTableView.swift in Sources */,

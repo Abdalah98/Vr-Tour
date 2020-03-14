@@ -1,0 +1,6 @@
+framework module RateBar {
+  umbrella header "RateBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

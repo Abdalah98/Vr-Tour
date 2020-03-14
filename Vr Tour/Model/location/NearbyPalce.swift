@@ -9,4 +9,6 @@
 import Foundation
 struct Nearby {
     var palces  = ""
+    var iamge = ""
+    
 }

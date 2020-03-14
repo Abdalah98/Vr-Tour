@@ -20,8 +20,7 @@ class nearbyPlaceTableView: UIViewController {
 
     }
 
-  var ArrayNerbyPalces :[Nearby] = [Nearby(palces: "policies"),Nearby(palces: "Cafes"),Nearby(palces: "Banks"),Nearby(palces: "Airports"),Nearby(palces: "Hotels"),Nearby(palces: "Restaurants")]
-    
+  var ArrayNerbyPalces :[Nearby] = [Nearby(palces: "policies",iamge: "police"),Nearby(palces: "Cafes",iamge: "cafe"),Nearby(palces: "Banks",iamge: "money"),Nearby(palces: "Airports",iamge: "Airport"),Nearby(palces: "Hotels",iamge: "hotel"),Nearby(palces: "Restaurants",iamge: "food"),Nearby(palces: "museum",iamge: "location")]
     //MARK: - CancelButton
     @IBAction func CancelPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -45,8 +44,9 @@ extension nearbyPlaceTableView : UITableViewDelegate , UITableViewDataSource{
        
          func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellNearbyPalce", for: indexPath)
-            let aa = ArrayNerbyPalces[indexPath.row]
-            cell.textLabel?.text = aa.palces
+            let nearbyPalcesIndex = ArrayNerbyPalces[indexPath.row]
+            cell.textLabel?.text = nearbyPalcesIndex.palces
+            cell.imageView?.image = UIImage(named:nearbyPalcesIndex.iamge)
             return cell
         }
     

@@ -19,11 +19,11 @@ class LocationVrTableVC: UIViewController {
     
     
     var locations:[LocationVr] = [
-      LocationVr(name: "Homei", type: "Cafe", location: "75 9th Ave, New York, NY 10011", image: "homei.jpg", isVisited: false,rating: "1"),
-      LocationVr(name: "Teakha", type: "Tea House", location: "110 St Marks Pl New York, NY 10009", image: "teakha.jpg", isVisited: false,rating: "4"),
-      LocationVr(name: "Cafe loisl", type: "Austrian / Causual Drink", location: "259 W 4th St, New York, NY 10014", image: "cafeloisl.jpg", isVisited: false,rating: "2"),
-      LocationVr(name: "Petite Oyster", type: "French", location: "326 Dekalb Ave, Brooklyn, NY 11205", image: "petiteoyster.jpg", isVisited: false,rating: "3"),
-          LocationVr(name: "CASK Pub and Kitchen", type: "Thai", location: "379 Grand St, New York, NY 10002", image: "caskpubkitchen.jpg", isVisited: false, rating: "8")
+        LocationVr(name: "Homei", type: "Cafe", location: "75 9th Ave, New York, NY 10011", image: "homei.jpg", isVisited: false,rating: "1", AboutPlace: "Homei"),
+        LocationVr(name: "Teakha", type: "Tea House", location: "110 St Marks Pl New York, NY 10009", image: "teakha.jpg", isVisited: false,rating: "4", AboutPlace: "Teakha"),
+        LocationVr(name: "Cafe loisl", type: "Austrian / Causual Drink", location: "259 W 4th St, New York, NY 10014", image: "cafeloisl.jpg", isVisited: false,rating: "2", AboutPlace: "Cafe loisl"),
+        LocationVr(name: "Petite Oyster", type: "French", location: "326 Dekalb Ave, Brooklyn, NY 11205", image: "petiteoyster.jpg", isVisited: false,rating: "3", AboutPlace: "Petite Oyster"),
+        LocationVr(name: "CASK Pub and Kitchen", type: "Thai", location: "379 Grand St, New York, NY 10002", image: "caskpubkitchen.jpg", isVisited: false, rating: "8", AboutPlace: "CASK Pub and Kitchen")
      ]
       override func viewDidLoad() {
             super.viewDidLoad()

@@ -14,13 +14,18 @@ class LocationVr {
     var image = ""
     var isVisited = false
     var rating = ""
-    init(name :String,type:String,location:String,image:String,isVisited:Bool,rating:String) {
+    var AboutPlace = ""
+   // var isliked = false
+    
+    init(name :String,type:String,location:String,image:String,isVisited:Bool,rating:String,AboutPlace:String) {
         self.name = name
         self.type = type
         self.location = location
         self.image  = image
         self.isVisited = isVisited
         self.rating = rating
-  
+        self.AboutPlace = AboutPlace
+      //  self.isliked = isliked
     }
 }
+//,isliked:Bool
