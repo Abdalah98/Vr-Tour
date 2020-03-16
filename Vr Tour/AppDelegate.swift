@@ -11,6 +11,8 @@ import IQKeyboardManagerSwift
 import Firebase
 import GoogleSignIn
 import FBSDKLoginKit
+import FacebookCore
+
 import SCLAlertView
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,16 +33,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         IQKeyboardManager.shared.enable = true
-      ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
-      FirebaseApp.configure()
+        ApplicationDelegate.shared.application(application,didFinishLaunchingWithOptions: launchOptions);      FirebaseApp.configure()
        checkUser()
         return true
     }
-  func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
-    return GIDSignIn.sharedInstance().handle(url)
-  }
-   
+//  func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+//    return GIDSignIn.sharedInstance().handle(url)
+//  }
+//
+    func application(_ app: UIApplication,open url: URL,options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        GIDSignIn.sharedInstance().handle(url)
 
+        return ApplicationDelegate.shared.application(
+            app,
+            open: url,
+            options: options
+        )
+    }
 }
 
 

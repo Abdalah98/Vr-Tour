@@ -17,11 +17,21 @@ class HistorygramTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    var isLiked :Bool = true
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func likedPicture(_ sender: UIButton) {
+        isLiked = !isLiked
+                 if isLiked {
+                     liked.setImage(UIImage(named: "favoritefill"), for: .normal)
+                 } else {
+                     liked.setImage(UIImage(named: "favorite"), for: .normal)
+                 }
+
     }
     
 }

@@ -13,8 +13,6 @@ pod 'RateBar'
 pod 'SideMenu', '~> 6.0'
 pod 'SVProgressHUD'
 pod 'Firebase/Auth'
-pod 'FBSDKCoreKit'
-pod 'FBSDKLoginKit'
 pod 'GoogleSignIn'
 pod 'Firebase/Database'
 
