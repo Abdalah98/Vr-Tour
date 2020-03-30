@@ -15,5 +15,7 @@ pod 'SVProgressHUD'
 pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 pod 'Firebase/Database'
+pod 'Firebase/Storage'
+pod 'Kingfisher', '~> 5.0'
 
 end

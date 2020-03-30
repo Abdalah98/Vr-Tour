@@ -10,7 +10,7 @@ import UIKit
 
 class HistorygramTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var imagePlace: UIImageView!
+  @IBOutlet weak var imagePlace: UIImageView!
     @IBOutlet weak var liked: UIButton!
     @IBOutlet weak var share: UIButton!
     override func awakeFromNib() {

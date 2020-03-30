@@ -445,8 +445,19 @@ extension MapViewController: UISearchBarDelegate {
         }
     }
     
+      func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+          searchBar.showsCancelButton = true
+      }
+      
+      func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+          searchBar.showsCancelButton = false
+      }
+      
+      func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+          searchBar.endEditing(true)
+      }
+    
 }
-
 
 
 

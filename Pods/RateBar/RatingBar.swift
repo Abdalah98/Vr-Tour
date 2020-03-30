@@ -118,7 +118,7 @@ import UIKit
                 rate = rate.truncatingRemainder(dividingBy: 5)
             }
             if rate <= 5 {
-                var stringNumber = String(rate).split(separator: ".")
+                let stringNumber = String(rate).split(separator: ".")
                 let firstNumber : Int! = Int(stringNumber[0])
                 let secandNumber : Int! = Int(stringNumber[1])
                 if firstNumber >= 1 {
