@@ -14,14 +14,14 @@ struct PostDetails {
     var imageHight: Int?
     var imageUrl: String?
     var imageWidth: Int?
-   // let user :User?
-    init(dictionary:[String:Any]) {
+    let user :User?
+    init(user:User,dictionary:[String:Any]) {
         self.Caption = dictionary["Caption"] as? String ?? ""
         self.creationDate = dictionary["creationDate"] as? Double ?? 0.0
         self.imageHight = dictionary["imageHight"] as? Int ?? 0
         self.imageUrl = dictionary["imageUrl"] as? String ?? ""
         self.imageWidth = dictionary["imageWidth"] as? Int ?? 0
-        //self.user = useruser:User,
+        self.user = user
 
     }
 }

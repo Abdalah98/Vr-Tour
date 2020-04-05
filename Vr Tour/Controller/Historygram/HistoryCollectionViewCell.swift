@@ -9,22 +9,27 @@
 import UIKit
 import Kingfisher
 import Social
+import FacebookShare
 class HistoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageprofile: UIImageView!
     @IBOutlet weak var imagePlace: UIImageView!
     @IBOutlet weak var liked: UIButton!
-    @IBOutlet weak var share: UIButton!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var caption: UILabel!
     
-    var user : User? {
+    var post : PostDetails? {
         didSet{
-            guard let profileImageUrl  = user?.profileImageUrl else {return }
+            guard let profileImageUrl  = post?.imageUrl else {return }
             guard  let url = URL(string :profileImageUrl)else{return}
-            if url.absoluteString != self.user?.profileImageUrl{return}
-            name.text = user?.userName
+            if url.absoluteString != self.post?.imageUrl {return}
+            name.text = post?.user?.userName
+            caption.text = post?.Caption
+            guard let profileImageUrls  = post?.user?.profileImageUrl else {return }
+             guard  let urls = URL(string :profileImageUrls)else{return}
             DispatchQueue.main.async {
-                self.imageprofile?.kf.setImage(with: url)
+                self.imagePlace?.kf.setImage(with: url)
+                self.imageprofile?.kf.setImage(with: urls)
+
             }
         }
     }
@@ -61,14 +66,6 @@ class HistoryCollectionViewCell: UICollectionViewCell {
     
     
     
-    @IBAction func shareAction(_ sender: Any) {
-        
-        
-//        if let fbComposer = SLComposeViewController(forServiceType:
-//                           SLServiceTypeFacebook) {
-//                           fbComposer.setInitialText("Having lunch at " + self.Array[indexPath.row])
-//            fbComposer.add(UIImage(named: self.Array[indexPath.row]));
-//    }
-    
+ 
 }
-}
+
