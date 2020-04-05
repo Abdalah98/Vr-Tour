@@ -124,26 +124,6 @@ class SignUpViewController: UIViewController , GIDSignInDelegate,UIImagePickerCo
                 SCLAlertView().showError("Error", subTitle:(error.localizedDescription), closeButtonTitle:"Ok")
                 return
             }
-            //
-            //            guard let uid = result?.user.uid else { return }
-            //
-            //            let values = ["email": email, "username": username]
-            //
-            //           Database.database().reference().child("users").child(uid).updateChildValues(values, withCompletionBlock: { (error, ref) in
-            //                if let error = error {
-            //                    SVProgressHUD.dismiss()
-            //
-            //                    print("Failed to update database values with error: ", error.localizedDescription)
-            //                    SCLAlertView().showError("Error", subTitle:(error.localizedDescription), closeButtonTitle:"Ok")
-            //
-            //                    return
-            //                }
-            //                SVProgressHUD.dismiss()
-            //
-            //                                let viewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToMap")
-            //                                         self.present(viewController!, animated: true, completion: nil)
-            //                                         SCLAlertView().showSuccess("Success ", subTitle:"is added successfully", closeButtonTitle:"Ok")
-            //            })
             
             let fileName = NSUUID().uuidString
             guard let image = self.image.imageView?.image else{
