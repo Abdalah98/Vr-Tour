@@ -19,6 +19,7 @@ class histogramCollectionViewController: UICollectionViewController ,UICollectio
         fetchPost()
         fetchUser()
         // collectionView.backgroundColor = .yellow
+        collectionView.reloadData()
     }
     
     @IBAction func cnacelAction(_ sender: Any) {
@@ -104,7 +105,7 @@ class histogramCollectionViewController: UICollectionViewController ,UICollectio
                  print(err.localizedDescription)
              }
         
-     
+       self.collectionView.reloadData()
         
     }
 

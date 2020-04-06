@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 class SharePhotoController: UIViewController {
     @IBOutlet weak var ImageShare: UIImageView!
     var  selectedImage : UIImage?
@@ -25,21 +26,14 @@ class SharePhotoController: UIViewController {
     override var prefersStatusBarHidden: Bool{
         return true
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
+
     @IBAction func BackAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func ShareAction(_ sender: Any) {
-        print("share")
         handelSare()
     }
   
@@ -49,6 +43,8 @@ class SharePhotoController: UIViewController {
           guard let image = self.selectedImage else{
             print("error image")
             return}
+        SVProgressHUD.show(withStatus: "Loading...")
+
           let fileName = NSUUID().uuidString
           guard let uploadedData = image.jpegData(compressionQuality: 0.5) else {
             print("error upload")
@@ -77,6 +73,7 @@ class SharePhotoController: UIViewController {
       fileprivate func  saveToDataBaseWithImageUrl(ImageUrl:String){
           guard let caption = self.captionTextView.text else{ return}
           guard let postimage = self.selectedImage else{ return}
+        SVProgressHUD.show(withStatus: "Loading...")
 
           guard let uid = Auth.auth().currentUser?.uid  else { return}
           let userPostRef = Database.database().reference().child("posts").child(uid)
@@ -94,8 +91,14 @@ class SharePhotoController: UIViewController {
              print("storge image ",err.localizedDescription)
                 return
           }
+            SVProgressHUD.dismiss()
+
               print("succ save in post to db")
-              self.dismiss(animated: true, completion: nil)
+            let vc = self.storyboard!.instantiateViewController(withIdentifier: "goHistoryGram")
+                      self.present(vc, animated: true, completion: nil)
+             // self.dismiss(animated: true, completion: nil)
+           
+
           }
       }
   }
