@@ -21,7 +21,11 @@ class histogramCollectionViewController: UICollectionViewController ,UICollectio
         // collectionView.backgroundColor = .yellow
         collectionView.reloadData()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+           
+          // self.posts.removeAll()
+    }
     @IBAction func cnacelAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -46,7 +50,7 @@ class histogramCollectionViewController: UICollectionViewController ,UICollectio
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width , height: 400)
+        return CGSize(width: view.frame.width , height:380)
     }
     var posts = [PostDetails]()
    // var user = [User]()
@@ -109,7 +113,18 @@ class histogramCollectionViewController: UICollectionViewController ,UICollectio
         
     }
 
+       @IBAction func shareButtonAction(_ sender: AnyObject) {
+
+        let activityVC = UIActivityViewController(activityItems: ["Whatever you    want to share"], applicationActivities: nil)
+            activityVC.popoverPresentationController?.sourceView = self.view
+            present(activityVC, animated: true, completion: nil)
+            activityVC.completionWithItemsHandler = { (activityType, completed:Bool, returnedItems:[Any]?, error: Error?) in
     
+                if completed  {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+    }
 }
  
     

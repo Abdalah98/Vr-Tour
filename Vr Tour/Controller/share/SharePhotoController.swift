@@ -68,6 +68,8 @@ class SharePhotoController: UIViewController {
                               self.saveToDataBaseWithImageUrl(ImageUrl:imageUrl)
                                }
                               print("Succ uplaod pic",ImageUrl)
+                          
+
       }
     }
       fileprivate func  saveToDataBaseWithImageUrl(ImageUrl:String){
@@ -94,9 +96,9 @@ class SharePhotoController: UIViewController {
             SVProgressHUD.dismiss()
 
               print("succ save in post to db")
-            let vc = self.storyboard!.instantiateViewController(withIdentifier: "goHistoryGram")
-                      self.present(vc, animated: true, completion: nil)
-             // self.dismiss(animated: true, completion: nil)
+         //   let vc = self.storyboard!.instantiateViewController(withIdentifier: "goHistoryGram")
+                  //    self.present(vc, animated: true, completion: nil)
+              self.dismiss(animated: true, completion: nil)
            
 
           }
