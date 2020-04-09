@@ -31,6 +31,7 @@
 		659BBF6C243831BF00217A3A /* SharePhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659BBF6B243831BE00217A3A /* SharePhotoController.swift */; };
 		65BE52FF2437E09E007F02AA /* HistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BE52FE2437E09E007F02AA /* HistoryCollectionViewCell.swift */; };
 		65C7EBD8241808D800F41BA5 /* NearbyPalce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7EBD7241808D800F41BA5 /* NearbyPalce.swift */; };
+		65CB638B243E710900FCEA3A /* mas.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 65CB638A243E710900FCEA3A /* mas.JPG */; };
 		65CF7E342439676E00FECF52 /* PostDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CF7E332439676E00FECF52 /* PostDetails.swift */; };
 		65D7D13C23860D3A00666180 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D13B23860D3A00666180 /* AppDelegate.swift */; };
 		65D7D13E23860D3A00666180 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D7D13D23860D3A00666180 /* LoginViewController.swift */; };
@@ -68,6 +69,7 @@
 		659BBF6B243831BE00217A3A /* SharePhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharePhotoController.swift; sourceTree = "<group>"; };
 		65BE52FE2437E09E007F02AA /* HistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		65C7EBD7241808D800F41BA5 /* NearbyPalce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPalce.swift; sourceTree = "<group>"; };
+		65CB638A243E710900FCEA3A /* mas.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mas.JPG; sourceTree = "<group>"; };
 		65CF7E332439676E00FECF52 /* PostDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetails.swift; sourceTree = "<group>"; };
 		65D7D13823860D3A00666180 /* Vr Tour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vr Tour.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D7D13B23860D3A00666180 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				65D7D14723860D3D00666180 /* Info.plist */,
 				65DC10A52417AE4E007E8374 /* GoogleService-Info.plist */,
 				65D7D14223860D3D00666180 /* Assets.xcassets */,
+				65CB638A243E710900FCEA3A /* mas.JPG */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65CB638B243E710900FCEA3A /* mas.JPG in Resources */,
 				65D7D15023860D7300666180 /* Main.storyboard in Resources */,
 				65DC10A62417AE4E007E8374 /* GoogleService-Info.plist in Resources */,
 				65D7D14F23860D7300666180 /* LaunchScreen.storyboard in Resources */,

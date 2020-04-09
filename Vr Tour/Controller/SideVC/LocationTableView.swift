@@ -17,14 +17,12 @@ class LocationVrTableVC: UIViewController {
     }
     
     
-    
+
+
     var locations:[LocationVr] = [
-        LocationVr(name: "Homei", type: "Cafe", location: "75 9th Ave, New York, NY 10011", image: "homei.jpg", isVisited: false,rating: "1", AboutPlace: "Homei"),
-        LocationVr(name: "Teakha", type: "Tea House", location: "110 St Marks Pl New York, NY 10009", image: "teakha.jpg", isVisited: false,rating: "4", AboutPlace: "Teakha"),
-        LocationVr(name: "Cafe loisl", type: "Austrian / Causual Drink", location: "259 W 4th St, New York, NY 10014", image: "cafeloisl.jpg", isVisited: false,rating: "2", AboutPlace: "Cafe loisl"),
-        LocationVr(name: "Petite Oyster", type: "French", location: "326 Dekalb Ave, Brooklyn, NY 11205", image: "petiteoyster.jpg", isVisited: false,rating: "3", AboutPlace: "Petite Oyster"),
-        LocationVr(name: "CASK Pub and Kitchen", type: "Thai", location: "379 Grand St, New York, NY 10002", image: "caskpubkitchen.jpg", isVisited: false, rating: "8", AboutPlace: "CASK Pub and Kitchen")
+       LocationVr(name: "Muhammad Ali", type: "Mosque", location: "Mosque of Muhammad AliMosque of Muhammad Ali", image: "Kairo_Zitadelle_Muhammad-Ali-Moschee_01.jpg", isVisited: false, rating: "", AboutPlace: "Muhammad Ali chose to build his state mosque entirely in the architectural style of his former overlords, the Ottomans, unlike the Mamluks who, despite their political submission to the Ottomans, stuck to the architectural styles of the previous Mamluk dynasties.The mosque was built with a central dome surrounded by four small and four semicircular domes. It was constructed in a square plan and measured 41x41 meters. The central dome is 21 meters in diameter and the height of the building is 52 meters. Two elegant cylindrical minarets of Turkish type with two balconies and conical caps are situated on the western side of the mosque, and rise to 82 meters.The use of this style, combined with the presence of two minarets and multiple half-domes surrounding the central dome — features reserved for mosques built on the authority of the Sultan — were a defiant declaration of de facto Egyptian independence.The main material is limestone likely sourced from the Great Pyramids of Giza but the lower storey and forecourt is tiled with alabaster up to 11,3 meters. The external facades are severe and angular and rise about four storeys until the level of the lead-covered domes.The mihrab on the southeastern wall is three storeys high and covered with a semicircular dome. There are two arcades on the second storey, rising on columns and covered with domes. Although there are three entrances on each side of the forecourt, the usual entry is through the northeastern gate. The forecourt measures 50x50 meters. It is enclosed by arched riwaks rising on pillars and covered by domes.There is a brass clock tower in the middle of the northwestern riwak, which was presented to Muhammad Ali by King Louis Philippe of France in 1845. The clock was reciprocated with the obelisk of Luxor now standing in Place de la Concorde in Paris.The interior has a measure of 41x41 meters and gives a great feeling of space. The use of two levels of domes gives a much greater sense of space than there actually is. The central dome rises on four arches standing on colossal piers. There are four semicircular domes around the central dome. There are four smaller domes on the corners as well. The domes are painted and embellished with motifs in relief. The walls and pillars are covered with alabaster up to 11 meters high.")
      ]
+    
       override func viewDidLoad() {
             super.viewDidLoad()
 

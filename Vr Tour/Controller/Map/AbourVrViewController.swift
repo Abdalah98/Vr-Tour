@@ -9,9 +9,9 @@
 import UIKit
 import RateBar
 import AVFoundation
+import Firebase
 class AboutVrViewController: UIViewController,RatingBarDelegate {
     @IBOutlet weak var ratingbar: RatingBar!
-
     @IBOutlet weak var imageVr: UIImageView!
     @IBOutlet weak var explainedAboutPlace: UITextView!
     @IBOutlet weak var SpeechText: UIButton!
@@ -23,13 +23,14 @@ class AboutVrViewController: UIViewController,RatingBarDelegate {
         ratingbar.delegate = self
         imageVr.image = iamgeShow
         explainedAboutPlace.text = documentation
-        // Do any additional setup after loading the view.
+        fetchPost()
     }
     var ChangeBk:Bool = false
     var speechSynthesizer = AVSpeechSynthesizer()
     
     func RatingBar(_ ratingBar: RatingBar, didChangeValue value: Int) {
            print(value)
+        saveRate(value: String(value))
        }
    
     @IBAction func GetPressedSpeech(_ sender: Any) {
@@ -65,5 +66,39 @@ class AboutVrViewController: UIViewController,RatingBarDelegate {
 
 
     }
-}
 
+
+    fileprivate func fetchPost(){
+          guard let uid = Auth.auth().currentUser?.uid else{return}
+          Database.database().reference().child("Rates").child(uid).observeSingleEvent(of: .value
+              , with: { (snapshot) in
+               //   print("value is: ", snapshot.value ?? "" )
+                  guard let dictionarys = snapshot.value as? [String:Any] else{return}
+                  dictionarys.forEach { (key,value) in
+                    guard let dictionary = value as? [String:Any]else { return}
+                  let rateView = dictionary["rate"] as? String
+
+                    self.ratingbar.setRatingValue(rateValue: Double(rateView ?? "err") as! Double)
+                }
+          }) { (err) in
+              print(err.localizedDescription)
+          }
+          
+      }
+    
+    
+    fileprivate func saveRate(value:String){
+        
+  guard let uid = Auth.auth().currentUser?.uid  else { return}
+           let userPostRef = Database.database().reference().child("Rates").child(uid)
+          let ref = userPostRef.childByAutoId()
+         let value = ["rate":value]
+           ref.onDisconnectUpdateChildValues(value) { (err, ref) in
+                if let err = err {
+                    print(err.localizedDescription)
+            }
+            print("done")
+           }
+
+}
+}
