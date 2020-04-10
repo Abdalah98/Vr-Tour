@@ -18,5 +18,5 @@ pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'Kingfisher', '~> 5.0'
 pod "CTPanoramaView", "~> 1.3"
-
+pod 'Firebase/Analytics'
 end
