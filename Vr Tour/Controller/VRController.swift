@@ -8,19 +8,33 @@
 
 import UIKit
 import CTPanoramaView
-
 class VRController: UIViewController {
-
+  
     @IBOutlet weak var compassView: CTPieSliceView!
     @IBOutlet weak var panoramaView: CTPanoramaView!
-
+     override func viewWillAppear(_ animated: Bool) {
+       
+       
+    } 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//         let value = UIInterfaceOrientation.landscapeLeft.rawValue
+//            UIDevice.current.setValue(value, forKey: "orientation")
+        
         loadSphericalImage()
         panoramaView.compass = compassView
     }
+override public var shouldAutorotate: Bool {
+    return false
+}
 
+override public var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    return .landscapeRight
+}
+
+override public var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+    return .landscapeRight
+}
     @IBAction func panoramaTypeTapped() {
         if panoramaView.panoramaType == .spherical {
             loadCylindricalImage()
@@ -44,8 +58,11 @@ class VRController: UIViewController {
     func loadCylindricalImage() {
         panoramaView.image = UIImage(named: "ms.JPG")
     }
-
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .all
+    @IBAction func cancelAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
+    //
+//    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+//        return .all
+//    }
 }

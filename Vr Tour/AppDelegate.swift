@@ -18,7 +18,6 @@ import SCLAlertView
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
     fileprivate func checkUser(){
         if Auth.auth().currentUser?.uid != nil{
             let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -50,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             options: options
         )
     }
+
 }
 
 

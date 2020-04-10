@@ -1727,8 +1727,8 @@
                                                 <constraint firstItem="wNU-ZQ-0xG" firstAttribute="leading" secondItem="7xr-On-eAX" secondAttribute="leading" id="rko-uU-hNl"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="khjkhjkhjkkjhkjhkgjkgkgjkfjhkjhkjhkjhkkkkkiihudfghjkhl;kktyuiopiuytredfghjhkknbvcvbnmn,.;'ojkl,muyfbvfwesxcvfgtyghhjuio" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aF-0e-Mih">
-                                            <rect key="frame" x="7" y="317" width="361" height="61"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aF-0e-Mih">
+                                            <rect key="frame" x="7" y="317" width="361" height="0.0"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -1841,17 +1841,17 @@
         <!--Controller-->
         <scene sceneID="gR6-XU-MaO">
             <objects>
-                <viewController id="ELr-lo-IRY" customClass="VRController" customModule="Vr_Tour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ELr-lo-IRY" customClass="VRController" customModule="Vr_Tour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tTl-2h-5Wg"/>
                         <viewControllerLayoutGuide type="bottom" id="x99-Sl-y5q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CXD-8D-Jno">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJw-35-oAv" customClass="CTPanoramaView" customModule="CTPanoramaView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yc6-uf-9h8">
                                         <rect key="frame" x="41" y="52" width="240" height="128"/>
@@ -1862,7 +1862,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bol-at-e9t">
-                                <rect key="frame" x="310" y="10" width="94" height="30"/>
+                                <rect key="frame" x="310" y="54" width="94" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Touch/Motion">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1877,7 +1877,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5A-7X-HP0">
-                                <rect key="frame" x="10" y="10" width="149" height="30"/>
+                                <rect key="frame" x="10" y="54" width="149" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Spherical / Cylindrical">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1891,8 +1891,22 @@
                                     <action selector="panoramaTypeTapped" destination="ELr-lo-IRY" eventType="touchUpInside" id="nvc-gr-yuU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NN0-Bn-At1">
+                                <rect key="frame" x="8" y="801.66666666666663" width="49" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="QUB-U8-wWc"/>
+                                    <constraint firstAttribute="width" constant="49" id="iFv-Nt-ZUt"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" backgroundImage="arrow.left.square.fill" catalog="system">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelAction:" destination="ELr-lo-IRY" eventType="touchUpInside" id="iPi-a3-Yuu"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2w-4k-78m" customClass="CTPieSliceView" customModule="CTPanoramaView">
-                                <rect key="frame" x="364" y="758" width="40" height="40"/>
+                                <rect key="frame" x="364" y="812" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="07y-Km-yV2"/>
@@ -1906,6 +1920,7 @@
                             <constraint firstAttribute="trailing" secondItem="VJw-35-oAv" secondAttribute="trailing" id="KeS-yG-m4f"/>
                             <constraint firstItem="VJw-35-oAv" firstAttribute="top" secondItem="tTl-2h-5Wg" secondAttribute="bottom" id="LYh-12-9Oy"/>
                             <constraint firstItem="bol-at-e9t" firstAttribute="top" secondItem="tTl-2h-5Wg" secondAttribute="bottom" constant="10" id="NMU-UW-kvP"/>
+                            <constraint firstItem="x99-Sl-y5q" firstAttribute="top" secondItem="NN0-Bn-At1" secondAttribute="bottom" constant="10" id="NjX-x3-1QE"/>
                             <constraint firstItem="VJw-35-oAv" firstAttribute="leading" secondItem="CXD-8D-Jno" secondAttribute="leading" id="RBb-W5-qrZ"/>
                             <constraint firstItem="bol-at-e9t" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="M5A-7X-HP0" secondAttribute="trailing" constant="100" id="RV4-9E-HE6"/>
                             <constraint firstAttribute="trailing" secondItem="H2w-4k-78m" secondAttribute="trailing" constant="10" id="XeD-zS-HsL"/>
@@ -1913,6 +1928,7 @@
                             <constraint firstItem="x99-Sl-y5q" firstAttribute="top" secondItem="H2w-4k-78m" secondAttribute="bottom" constant="10" id="iFs-W3-qea"/>
                             <constraint firstItem="M5A-7X-HP0" firstAttribute="leading" secondItem="CXD-8D-Jno" secondAttribute="leading" constant="10" id="kmI-w0-Fy1"/>
                             <constraint firstItem="x99-Sl-y5q" firstAttribute="top" secondItem="VJw-35-oAv" secondAttribute="bottom" id="tOR-vN-Nz5"/>
+                            <constraint firstItem="NN0-Bn-At1" firstAttribute="leading" secondItem="uF6-WU-55o" secondAttribute="leading" constant="8" id="yKm-nM-r0Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uF6-WU-55o"/>
                     </view>
@@ -1924,12 +1940,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wv2-e9-xyN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8090" y="397"/>
+            <point key="canvasLocation" x="8089.8550724637689" y="396.42857142857139"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background" width="197" height="426.66665649414062"/>
         <image name="Name" width="18" height="18"/>
+        <image name="arrow.left.square.fill" catalog="system" width="64" height="56"/>
         <image name="arrowshape.turn.up.right" catalog="system" width="64" height="52"/>
         <image name="cloud.sun.fill" catalog="system" width="64" height="44"/>
         <image name="command" catalog="system" width="64" height="56"/>
