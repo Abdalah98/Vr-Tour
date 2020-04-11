@@ -8,6 +8,7 @@
 
 import UIKit
 import CTPanoramaView
+
 class VRController: UIViewController {
   
     @IBOutlet weak var compassView: CTPieSliceView!
@@ -15,7 +16,7 @@ class VRController: UIViewController {
      override func viewWillAppear(_ animated: Bool) {
        
        
-    } 
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 //         let value = UIInterfaceOrientation.landscapeLeft.rawValue
@@ -65,4 +66,7 @@ override public var preferredInterfaceOrientationForPresentation: UIInterfaceOri
 //    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
 //        return .all
 //    }
+    //func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+   /*if(UserDefaults.standard.value(forKey: "id") == nil) {
+        if(indexPath.row == 3) {*/
 }

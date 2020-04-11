@@ -29,6 +29,8 @@
 		659BBF682438314F00217A3A /* PhotoSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659BBF652438314F00217A3A /* PhotoSelectorController.swift */; };
 		659BBF692438314F00217A3A /* PhotoSelectorReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659BBF662438314F00217A3A /* PhotoSelectorReusableView.swift */; };
 		659BBF6C243831BF00217A3A /* SharePhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659BBF6B243831BE00217A3A /* SharePhotoController.swift */; };
+		65B6BB9524417AA200DCBDFA /* VRWebsitetV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B6BB9324417AA200DCBDFA /* VRWebsitetV.swift */; };
+		65B6BB9624417AA200DCBDFA /* VRWebSiteCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B6BB9424417AA200DCBDFA /* VRWebSiteCV.swift */; };
 		65BE52FF2437E09E007F02AA /* HistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BE52FE2437E09E007F02AA /* HistoryCollectionViewCell.swift */; };
 		65C3C41424402FE600FA7D01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65C3C41324402FE600FA7D01 /* GoogleService-Info.plist */; };
 		65C7EBD8241808D800F41BA5 /* NearbyPalce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7EBD7241808D800F41BA5 /* NearbyPalce.swift */; };
@@ -68,6 +70,8 @@
 		659BBF652438314F00217A3A /* PhotoSelectorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectorController.swift; sourceTree = "<group>"; };
 		659BBF662438314F00217A3A /* PhotoSelectorReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectorReusableView.swift; sourceTree = "<group>"; };
 		659BBF6B243831BE00217A3A /* SharePhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharePhotoController.swift; sourceTree = "<group>"; };
+		65B6BB9324417AA200DCBDFA /* VRWebsitetV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRWebsitetV.swift; sourceTree = "<group>"; };
+		65B6BB9424417AA200DCBDFA /* VRWebSiteCV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRWebSiteCV.swift; sourceTree = "<group>"; };
 		65BE52FE2437E09E007F02AA /* HistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		65C3C41324402FE600FA7D01 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65C7EBD7241808D800F41BA5 /* NearbyPalce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPalce.swift; sourceTree = "<group>"; };
@@ -188,6 +192,16 @@
 			path = share;
 			sourceTree = "<group>";
 		};
+		65B6BB9724417DFD00DCBDFA /* VR */ = {
+			isa = PBXGroup;
+			children = (
+				65B6BB9424417AA200DCBDFA /* VRWebSiteCV.swift */,
+				65B6BB9324417AA200DCBDFA /* VRWebsitetV.swift */,
+				65FD6B5F243EAB7B00CE50FB /* VRController.swift */,
+			);
+			path = VR;
+			sourceTree = "<group>";
+		};
 		65C13B0123FC882500CB102F /* SideVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,11 +236,11 @@
 			isa = PBXGroup;
 			children = (
 				65D7D13B23860D3A00666180 /* AppDelegate.swift */,
+				657C732923F4CAE70010597B /* Model */,
+				65D7D15423860DCB00666180 /* View */,
 				65D7D15523860E0600666180 /* Controller */,
 				65D7D15323860DBA00666180 /* Extension */,
-				657C732923F4CAE70010597B /* Model */,
 				65DC10A02417AD6C007E8374 /* Resources */,
-				65D7D15423860DCB00666180 /* View */,
 			);
 			path = "Vr Tour";
 			sourceTree = "<group>";
@@ -253,13 +267,13 @@
 		65D7D15523860E0600666180 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				65FD6B5F243EAB7B00CE50FB /* VRController.swift */,
-				659BBF6A243831AC00217A3A /* share */,
-				659BBF632438313600217A3A /* fetchPhoto */,
-				658486AA241C4B7400638B7E /* Historygram */,
-				6537ACA8241A16510006B692 /* Map */,
 				657C732A23F4CB090010597B /* login */,
 				65C13B0123FC882500CB102F /* SideVC */,
+				6537ACA8241A16510006B692 /* Map */,
+				65B6BB9724417DFD00DCBDFA /* VR */,
+				658486AA241C4B7400638B7E /* Historygram */,
+				659BBF632438313600217A3A /* fetchPhoto */,
+				659BBF6A243831AC00217A3A /* share */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -443,8 +457,10 @@
 				65D7D15923860F0600666180 /* ForgotPasswordViewController.swift in Sources */,
 				6564F23124030EA80055EB1B /* closeKeyBoard.swift in Sources */,
 				659BBF672438314F00217A3A /* PhotoSelectorCell.swift in Sources */,
+				65B6BB9524417AA200DCBDFA /* VRWebsitetV.swift in Sources */,
 				659BBF6C243831BF00217A3A /* SharePhotoController.swift in Sources */,
 				65DC109E24179D21007E8374 /* nearbyPlaceTableView.swift in Sources */,
+				65B6BB9624417AA200DCBDFA /* VRWebSiteCV.swift in Sources */,
 				65D7D13C23860D3A00666180 /* AppDelegate.swift in Sources */,
 				6566D68324147A3800DD32F2 /* LocationTableView.swift in Sources */,
 				6575C15324390538003D9782 /* histogramCollectionViewController.swift in Sources */,

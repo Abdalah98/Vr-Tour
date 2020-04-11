@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import SVProgressHUD
+
 class SharePhotoController: UIViewController {
     @IBOutlet weak var ImageShare: UIImageView!
     var  selectedImage : UIImage?
@@ -20,13 +21,14 @@ class SharePhotoController: UIViewController {
         ImageShare.contentMode = .scaleAspectFill
         // Do any additional setup after loading the view.
         ImageShare.image = selectedImage
-        ImageShare.clipsToBounds = true 
+        ImageShare.clipsToBounds = true
     }
     
     override var prefersStatusBarHidden: Bool{
         return true
     }
 
+  
   
 
     @IBAction func BackAction(_ sender: Any) {
@@ -35,6 +37,7 @@ class SharePhotoController: UIViewController {
     
     @IBAction func ShareAction(_ sender: Any) {
         handelSare()
+   
     }
   
       func handelSare(){

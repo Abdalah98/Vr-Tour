@@ -13,14 +13,19 @@ import FacebookShare
 private let reuseIdentifier = "Historgram"
 
 class histogramCollectionViewController: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchPost()
         fetchUser()
         // collectionView.backgroundColor = .yellow
-        collectionView.reloadData()
+       
     }
+    
+   
+    
+   
     override func viewWillAppear(_ animated: Bool) {
            super.viewWillAppear(animated)
            

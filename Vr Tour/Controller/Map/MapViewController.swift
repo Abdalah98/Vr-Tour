@@ -310,6 +310,7 @@ func convertAddressStringtoLocation()
             let destination = segue.destination as! AboutVrViewController
             destination.documentation = showLocationByVR?.AboutPlace ?? ""
             destination.iamgeShow = UIImage(named: showLocationByVR?.image ?? "")
+            destination.url = showLocationByVR?.url ?? ""
         }
     }
         @IBAction func showDirection(sender: AnyObject) {

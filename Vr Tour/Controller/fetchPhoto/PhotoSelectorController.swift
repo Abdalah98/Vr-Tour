@@ -11,11 +11,13 @@ import Photos
 private let reuseIdentifier = "PhotoSelector"
 
 class PhotoSelectorController: UICollectionViewController,UICollectionViewDelegateFlowLayout{
+  
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+       
     fatchImage()
 
     }
@@ -34,8 +36,7 @@ class PhotoSelectorController: UICollectionViewController,UICollectionViewDelega
 
     }
     
-          
-     
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GoShareImage"{
             let destination = segue.destination as! SharePhotoController

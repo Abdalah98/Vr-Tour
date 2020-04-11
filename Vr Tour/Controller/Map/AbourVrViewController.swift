@@ -10,7 +10,11 @@ import UIKit
 import RateBar
 import AVFoundation
 import Firebase
+
 class AboutVrViewController: UIViewController,RatingBarDelegate {
+    
+ 
+    
     @IBOutlet weak var ratingbar: RatingBar!
     @IBOutlet weak var imageVr: UIImageView!
     @IBOutlet weak var explainedAboutPlace: UITextView!
@@ -18,12 +22,15 @@ class AboutVrViewController: UIViewController,RatingBarDelegate {
     @IBOutlet weak var vrButton: UIButton!
     var iamgeShow :UIImage?
     var documentation = ""
+     var url = ""
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         ratingbar.delegate = self
         imageVr.image = iamgeShow
         explainedAboutPlace.text = documentation
         fetchPost()
+     
     }
     var ChangeBk:Bool = false
     var speechSynthesizer = AVSpeechSynthesizer()
