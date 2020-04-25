@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 import Kingfisher
-import FacebookShare
 private let reuseIdentifier = "Historgram"
 
 class histogramCollectionViewController: UICollectionViewController ,UICollectionViewDelegateFlowLayout{

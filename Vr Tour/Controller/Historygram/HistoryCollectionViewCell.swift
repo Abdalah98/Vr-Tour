@@ -9,7 +9,6 @@
 import UIKit
 import Kingfisher
 import Social
-import FacebookShare
 class HistoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageprofile: UIImageView!
     @IBOutlet weak var imagePlace: UIImageView!

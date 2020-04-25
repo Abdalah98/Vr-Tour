@@ -12,7 +12,7 @@ struct VRWeb {
     var url :String
 }
 class VRWebsitetV: UITableViewController {
-    var palces:[VRWeb] = [VRWeb(ver: "1",url: "https://my.matterport.com/show/?m=vLYoS66CWpk&fbclid=IwAR3UPmjDDyQXToUi4d1kglfBiWwteFCyqqgOo46bx47_bzTs-GaZC3zViKI"),VRWeb(ver: "2", url: "https://my.matterport.com/show/?m=d42fuVA21To&fbclid=IwAR2F_SsmCcs9MZzieOMmh0hgT0hAI3z08nvkrxM1nGhr_PtmcaqTCS2RsN0")]
+    var palces:[VRWeb] = [VRWeb(ver: "Tomb of Menna in the Theban Necropolis",url: "https://my.matterport.com/show/?m=vLYoS66CWpk&fbclid=IwAR3UPmjDDyQXToUi4d1kglfBiWwteFCyqqgOo46bx47_bzTs-GaZC3zViKI"),VRWeb(ver: "Tomb of Queen Meresankh III", url: "https://my.matterport.com/show/?m=d42fuVA21To&fbclid=IwAR2F_SsmCcs9MZzieOMmh0hgT0hAI3z08nvkrxM1nGhr_PtmcaqTCS2RsN0")]
     override func viewDidLoad() {
         super.viewDidLoad()
 

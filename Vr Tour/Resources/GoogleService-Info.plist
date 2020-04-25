@@ -3,36 +3,36 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>244784052745-fe61inhcucu2ooor6879129nldfaov83.apps.googleusercontent.com</string>
+	<string>580863765306-3nd430aia29hrnc6iic8qq0m41cqmq6u.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.244784052745-fe61inhcucu2ooor6879129nldfaov83</string>
+	<string>com.googleusercontent.apps.580863765306-3nd430aia29hrnc6iic8qq0m41cqmq6u</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>244784052745-afm4nku091kermiif47icog0q884gfel.apps.googleusercontent.com</string>
+	<string>580863765306-ugrik8clpaluof4r77h65dbihhlk989r.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyD1O3RljpbjHNu52elP-LqL1GSO_kOdoF8</string>
+	<string>AIzaSyBkR0jIVZOODpQpr6JTSEV5-ebNuWP4ye0</string>
 	<key>GCM_SENDER_ID</key>
-	<string>244784052745</string>
+	<string>580863765306</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>Abdalah.Vr-Tour</string>
 	<key>PROJECT_ID</key>
-	<string>vr-tour-8153b</string>
+	<string>mytour-6820e</string>
 	<key>STORAGE_BUCKET</key>
-	<string>vr-tour-8153b.appspot.com</string>
+	<string>mytour-6820e.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:244784052745:ios:548b7d99c7ac0c75ed56d8</string>
+	<string>1:580863765306:ios:7f0ea2378dcacad0ff3e03</string>
 	<key>DATABASE_URL</key>
-	<string>https://vr-tour-8153b.firebaseio.com</string>
+	<string>https://mytour-6820e.firebaseio.com</string>
 </dict>
 </plist>

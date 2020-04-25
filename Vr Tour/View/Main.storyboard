@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="U7p-aO-5JK">
-                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000006" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" red="0.93991082910000001" green="0.54788053039999995" blue="0.2356574535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pYT-AV-EUN">
@@ -444,6 +444,7 @@
                                                     <constraint firstAttribute="width" constant="150" id="0su-Dx-Djg"/>
                                                     <constraint firstAttribute="height" constant="150" id="A37-nG-2IZ"/>
                                                 </constraints>
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <state key="normal" backgroundImage="photo.fill" catalog="system">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
@@ -1041,7 +1042,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjy-d8-pno">
-                                <rect key="frame" x="340" y="775" width="64" height="53"/>
+                                <rect key="frame" x="340" y="774.66666666666663" width="64" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="RXF-Xb-8gT"/>
                                     <constraint firstAttribute="height" constant="54.333333333333371" id="zVY-Cc-tuf"/>
@@ -2094,21 +2095,40 @@
             </objects>
             <point key="canvasLocation" x="8803" y="-1319"/>
         </scene>
-        <!--Web SiteCV-->
+        <!--Title-->
         <scene sceneID="2m8-D7-4zw">
             <objects>
-                <viewController id="Q9j-m6-Zwc" customClass="VRWebSiteCV" customModule="Vr_Tour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Q9j-m6-Zwc" customClass="VRWebSiteCV" customModule="Vr_Tour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZQb-P4-KHU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcT-8p-DdM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jcT-8p-DdM" firstAttribute="centerX" secondItem="ZQb-P4-KHU" secondAttribute="centerX" id="dyu-ga-yUt"/>
+                            <constraint firstItem="jcT-8p-DdM" firstAttribute="top" secondItem="ZQb-P4-KHU" secondAttribute="topMargin" constant="-44" id="eJz-Ei-v3b"/>
+                            <constraint firstItem="jcT-8p-DdM" firstAttribute="leading" secondItem="Zn4-v7-SsL" secondAttribute="leading" id="ne9-aX-vhT"/>
+                            <constraint firstItem="jcT-8p-DdM" firstAttribute="centerY" secondItem="ZQb-P4-KHU" secondAttribute="centerY" id="qdD-55-XMm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Zn4-v7-SsL"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aC2-np-RaL"/>
+                    <navigationItem key="navigationItem" title="Title" id="hZC-yL-IE6"/>
+                    <connections>
+                        <outlet property="webView" destination="jcT-8p-DdM" id="RgV-t8-Py5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bl6-uy-CwG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9596" y="-1319"/>
+            <point key="canvasLocation" x="9595.652173913044" y="-1319.1964285714284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TUj-bc-TaR">
@@ -2121,7 +2141,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="yOY-lm-Nnv" kind="relationship" relationship="rootViewController" id="lUI-kk-po3"/>
+                        <segue destination="yOY-lm-Nnv" kind="relationship" relationship="rootViewController" id="aXG-yx-f3W"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arw-Vc-bOg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
