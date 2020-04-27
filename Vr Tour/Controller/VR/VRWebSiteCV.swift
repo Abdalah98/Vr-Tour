@@ -14,19 +14,15 @@ class VRWebSiteCV: UIViewController ,WKNavigationDelegate {
      var location :VRWeb?
    
     @IBOutlet weak var webView: WKWebView!
-    override func loadView() {
-        webView = WKWebView()
-        webView.navigationDelegate = self
-        view = webView
-        location?.url = urls
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        location?.url = urls
+
         let url = URL(string: urls)!
            webView.load(URLRequest(url: url))
            webView.allowsBackForwardNavigationGestures = true
         // Do any additional setup after loading the view.
-        webView.frame=self.view.bounds;
+    
 
     }
     override public var shouldAutorotate: Bool {
@@ -39,6 +35,12 @@ class VRWebSiteCV: UIViewController ,WKNavigationDelegate {
 
     override public var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
         return .landscapeRight
+    }
+    
+
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+
     }
 }
 
