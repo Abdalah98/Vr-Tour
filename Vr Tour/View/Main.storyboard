@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="U7p-aO-5JK">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000006" height="862"/>
                                 <color key="backgroundColor" red="0.93991082910000001" green="0.54788053039999995" blue="0.2356574535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pYT-AV-EUN">
@@ -120,7 +120,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aoh-XN-lcq">
                                                 <rect key="frame" x="5" y="190" width="404" height="100"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BGs-DM-YOy" customClass="DesignableUITextField" customModule="Vr_Tour" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BGs-DM-YOy" customClass="DesignableUITextField" customModule="Vr_Tour" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="404" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="EOb-4m-0Ve"/>
@@ -134,7 +134,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UdY-6L-bwv" customClass="DesignableUITextField" customModule="Vr_Tour" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UdY-6L-bwv" customClass="DesignableUITextField" customModule="Vr_Tour" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="50" width="404" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="Jnv-zU-KYa"/>
@@ -674,7 +674,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="GetPressedWeather:" destination="dw5-cp-1wb" eventType="touchUpInside" id="f1m-xU-PGK"/>
+                                                        <action selector="GetPressedWeather:" destination="dw5-cp-1wb" eventType="touchUpInside" id="qmQ-Di-qIv"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -714,7 +714,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="CurrencyExchange:" destination="dw5-cp-1wb" eventType="touchUpInside" id="rwD-QA-LES"/>
+                                                        <action selector="CurrencyExchange:" destination="dw5-cp-1wb" eventType="touchUpInside" id="PdI-2F-qwK"/>
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8J5-1h-8Tl">
@@ -760,7 +760,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="PressdLocationVr:" destination="dw5-cp-1wb" eventType="touchUpInside" id="rs5-DW-unH"/>
+                                                        <action selector="PressdLocationVr:" destination="dw5-cp-1wb" eventType="touchUpInside" id="6f8-Jz-SJQ"/>
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="16e-ol-d2f">
@@ -806,7 +806,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="nearbyPlace:" destination="dw5-cp-1wb" eventType="touchUpInside" id="Kbp-8c-O5K"/>
+                                                        <action selector="nearbyPlace:" destination="dw5-cp-1wb" eventType="touchUpInside" id="EW0-bk-syG"/>
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" catalog="system" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="07c-IV-c2C">
@@ -834,13 +834,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhl-WJ-gcg">
-                                                    <rect key="frame" x="64" y="10" width="87" height="33"/>
+                                                    <rect key="frame" x="64" y="10" width="73" height="33"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="33" id="pQs-u8-Msm"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                                    <state key="normal" title="VR Website">
+                                                    <state key="normal" title="Other VR ">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
@@ -852,7 +852,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="VRwebSiteAction:" destination="dw5-cp-1wb" eventType="touchUpInside" id="UMf-KB-mAo"/>
+                                                        <action selector="VRwebSiteAction:" destination="dw5-cp-1wb" eventType="touchUpInside" id="nqT-kY-aed"/>
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vr" translatesAutoresizingMaskIntoConstraints="NO" id="fn5-ef-d8k">
@@ -906,7 +906,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="Historygram:" destination="dw5-cp-1wb" eventType="touchUpInside" id="Dtg-Ue-hi5"/>
+                                                        <action selector="Historygram:" destination="dw5-cp-1wb" eventType="touchUpInside" id="TJV-cL-5dx"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -944,7 +944,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="signOut:" destination="dw5-cp-1wb" eventType="touchUpInside" id="RC5-IF-Nq2"/>
+                                                        <action selector="signOut:" destination="dw5-cp-1wb" eventType="touchUpInside" id="LNZ-NZ-wEf"/>
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="escape" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PX8-sG-dCd">
@@ -974,8 +974,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Side menu" id="YAk-0N-MNC"/>
                     <connections>
-                        <outlet property="ImageProfile" destination="OSw-Cl-TeO" id="dif-Wn-2ql"/>
-                        <outlet property="nameProfile" destination="4hU-od-jdj" id="KwY-Iz-RLf"/>
+                        <outlet property="ImageProfile" destination="OSw-Cl-TeO" id="Cp0-GY-LKc"/>
+                        <outlet property="nameProfile" destination="4hU-od-jdj" id="s4f-Dd-HQj"/>
                         <outlet property="sidemenu" destination="b3P-vN-aCM" id="u5S-uM-hhR"/>
                     </connections>
                 </tableViewController>
@@ -1320,29 +1320,30 @@
                                     <constraint firstAttribute="width" constant="196" id="Z7C-oK-iQt"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgm-tL-UXN">
-                                <rect key="frame" x="0.0" y="466" width="414" height="28"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Xgm-tL-UXN">
+                                <rect key="frame" x="8" y="466" width="398" height="396"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="Xgm-tL-UXN" firstAttribute="trailing" secondItem="fLe-0Y-m6k" secondAttribute="trailing" id="9Md-3y-u2Y"/>
+                            <constraint firstItem="fLe-0Y-m6k" firstAttribute="trailing" secondItem="Xgm-tL-UXN" secondAttribute="trailing" constant="8" id="3bA-V0-orH"/>
+                            <constraint firstItem="Xgm-tL-UXN" firstAttribute="leading" secondItem="fLe-0Y-m6k" secondAttribute="leading" constant="8" id="AYf-nh-e91"/>
                             <constraint firstItem="fLe-0Y-m6k" firstAttribute="trailing" secondItem="R54-bK-y0Q" secondAttribute="trailing" constant="41" id="G71-dj-4E5"/>
+                            <constraint firstItem="Xgm-tL-UXN" firstAttribute="bottom" secondItem="fLe-0Y-m6k" secondAttribute="bottom" id="KR6-xQ-0ay"/>
                             <constraint firstItem="R54-bK-y0Q" firstAttribute="leading" secondItem="fLe-0Y-m6k" secondAttribute="leading" constant="9" id="Lth-ut-N70"/>
-                            <constraint firstItem="Xgm-tL-UXN" firstAttribute="top" secondItem="R54-bK-y0Q" secondAttribute="bottom" constant="8" id="OEB-th-fba"/>
                             <constraint firstItem="R54-bK-y0Q" firstAttribute="top" secondItem="6J5-KN-3ZU" secondAttribute="bottom" constant="8" id="Pqq-rQ-jUG"/>
                             <constraint firstItem="gKf-6K-Yq9" firstAttribute="leading" secondItem="fLe-0Y-m6k" secondAttribute="leading" id="T4I-c3-TPn"/>
                             <constraint firstItem="gKf-6K-Yq9" firstAttribute="top" secondItem="B30-bm-EC6" secondAttribute="bottom" id="U0P-IQ-KiX"/>
                             <constraint firstItem="fLe-0Y-m6k" firstAttribute="trailing" secondItem="1UO-C2-dZY" secondAttribute="trailing" constant="10" id="Xjd-sx-TT7"/>
                             <constraint firstItem="6J5-KN-3ZU" firstAttribute="leading" secondItem="fLe-0Y-m6k" secondAttribute="leading" constant="9" id="Y9v-qt-Gpg"/>
-                            <constraint firstItem="Xgm-tL-UXN" firstAttribute="leading" secondItem="fLe-0Y-m6k" secondAttribute="leading" id="eSJ-sV-MfR"/>
                             <constraint firstItem="B30-bm-EC6" firstAttribute="leading" secondItem="fLe-0Y-m6k" secondAttribute="leading" id="epT-pb-rd0"/>
                             <constraint firstItem="B30-bm-EC6" firstAttribute="trailing" secondItem="fLe-0Y-m6k" secondAttribute="trailing" id="f5v-zx-EWb"/>
+                            <constraint firstItem="Xgm-tL-UXN" firstAttribute="top" secondItem="R54-bK-y0Q" secondAttribute="bottom" constant="8" id="gWv-EP-Knv"/>
                             <constraint firstItem="6J5-KN-3ZU" firstAttribute="top" secondItem="gKf-6K-Yq9" secondAttribute="bottom" constant="17" id="hg2-Fi-nEG"/>
                             <constraint firstItem="1UO-C2-dZY" firstAttribute="leading" secondItem="6J5-KN-3ZU" secondAttribute="trailing" constant="31.329999999999998" id="mmR-I4-JqK"/>
                             <constraint firstItem="gKf-6K-Yq9" firstAttribute="trailing" secondItem="fLe-0Y-m6k" secondAttribute="trailing" id="tAF-zR-seT"/>
@@ -1362,7 +1363,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGN-Mn-1ZJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7146" y="415"/>
+            <point key="canvasLocation" x="7144.9275362318849" y="414.50892857142856"/>
         </scene>
         <!--Location Vr TableVC-->
         <scene sceneID="2DM-Ub-rLz">
@@ -1473,7 +1474,7 @@
         <!--Weather View Controller-->
         <scene sceneID="8nL-iv-BRG">
             <objects>
-                <viewController storyboardIdentifier="GoToWeather" modalPresentationStyle="fullScreen" id="fPd-oH-uX4" customClass="WeatherViewController" customModule="Vr_Tour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GoToWeather" id="fPd-oH-uX4" customClass="WeatherViewController" customModule="Vr_Tour" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2xl-Wv-tLa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1554,39 +1555,6 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQr-sZ-mWb">
                                         <rect key="frame" x="134" y="315.66666666666674" width="240" height="502.33333333333326"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="E42-EB-vM3">
-                                                <rect key="frame" x="8" y="52" width="227" height="50"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMj-Ga-8cT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="227" height="50"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                                        <state key="normal" title="Cancel">
-                                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="11"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="Cancel:" destination="fPd-oH-uX4" eventType="touchUpInside" id="txV-CV-W0X"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="WMj-Ga-8cT" firstAttribute="width" secondItem="E42-EB-vM3" secondAttribute="width" id="5d2-jF-Ktf"/>
-                                                    <constraint firstAttribute="height" constant="50" id="GLC-79-PED"/>
-                                                    <constraint firstAttribute="width" constant="227" id="xeI-4W-ERn"/>
-                                                </constraints>
-                                            </stackView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="E42-EB-vM3" firstAttribute="leading" secondItem="mQr-sZ-mWb" secondAttribute="leadingMargin" id="H8A-0k-2ky"/>
-                                            <constraint firstAttribute="trailing" secondItem="E42-EB-vM3" secondAttribute="trailing" constant="5" id="rIa-c2-64i"/>
-                                            <constraint firstItem="E42-EB-vM3" firstAttribute="top" secondItem="mQr-sZ-mWb" secondAttribute="top" constant="52" id="wev-y2-Tbd"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -1844,8 +1812,8 @@
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aF-0e-Mih">
                                             <rect key="frame" x="7" y="317" width="361" height="0.0"/>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                             <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -2198,7 +2166,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ItA-qy-BIR"/>
+        <segue reference="LVz-NB-JPo"/>
         <segue reference="goe-i4-9Rz"/>
         <segue reference="wkc-zh-dP1"/>
     </inferredMetricsTieBreakers>
