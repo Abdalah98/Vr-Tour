@@ -22,7 +22,7 @@ class LocationVrTableVC: UIViewController {
     var locations:[LocationVr] = [
         LocationVr(name: "Mosque Muhammad Ali", type: "Mosque", location: "Mosque of Muhammad AliMosque of Muhammad Ali", image: "Kairo_Zitadelle_Muhammad-Ali-Moschee_01.jpg", isVisited: false, url: "", AboutPlace: "Muhammad Ali chose to build his state mosque entirely in the architectural style of his former overlords, the Ottomans, unlike the Mamluks who, despite their political submission to the Ottomans, stuck to the architectural styles of the previous Mamluk dynasties.The mosque was built with a central dome surrounded by four small and four semicircular domes. It was constructed in a square plan and measured 41x41 meters. The central dome is 21 meters in diameter and the height of the building is 52 meters. Two elegant cylindrical minarets of Turkish type with two balconies and conical caps are situated on the western side of the mosque, and rise to 82 meters.The use of this style, combined with the presence of two minarets and multiple half-domes surrounding the central dome — features reserved for mosques built on the authority of the Sultan — were a defiant declaration of de facto Egyptian independence.The main material is limestone likely sourced from the Great Pyramids of Giza but the lower storey and forecourt is tiled with alabaster up to 11,3 meters."),
         
-        LocationVr(name: "", type: "", location: "", image: "", isVisited: false, url: "https://my.matterport.com/show/?m=vLYoS66CWpk&fbclid=IwAR3UPmjDDyQXToUi4d1kglfBiWwteFCyqqgOo46bx47_bzTs-GaZC3zViKI", AboutPlace: "")
+    
      ]
     
       override func viewDidLoad() {

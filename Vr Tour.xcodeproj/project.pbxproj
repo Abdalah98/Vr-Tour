@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		28185555F092B7C01970EAFE /* Pods_Vr_Tour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C80771A2CC7BC09EAA5BBD /* Pods_Vr_Tour.framework */; };
+		650F32592482F7BE0063C416 /* otherPlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650F32582482F7BE0063C416 /* otherPlacesCell.swift */; };
 		6537ACAC241A20680006B692 /* AbourVrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6537ACAB241A20680006B692 /* AbourVrViewController.swift */; };
 		655E2F6C243169AE0076BA47 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655E2F6B243169AE0076BA47 /* Users.swift */; };
 		6564F23124030EA80055EB1B /* closeKeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6564F23024030EA80055EB1B /* closeKeyBoard.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		01C80771A2CC7BC09EAA5BBD /* Pods_Vr_Tour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vr_Tour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		283661E027BC137F52FB0867 /* Pods-Vr Tour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vr Tour.debug.xcconfig"; path = "Target Support Files/Pods-Vr Tour/Pods-Vr Tour.debug.xcconfig"; sourceTree = "<group>"; };
+		650F32582482F7BE0063C416 /* otherPlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otherPlacesCell.swift; sourceTree = "<group>"; };
 		6537ACAB241A20680006B692 /* AbourVrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbourVrViewController.swift; sourceTree = "<group>"; };
 		655E2F6B243169AE0076BA47 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		6564F23024030EA80055EB1B /* closeKeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = closeKeyBoard.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				65B6BB9424417AA200DCBDFA /* VRWebSiteCV.swift */,
 				65B6BB9324417AA200DCBDFA /* VRWebsitetV.swift */,
 				65FD6B5F243EAB7B00CE50FB /* VRController.swift */,
+				650F32582482F7BE0063C416 /* otherPlacesCell.swift */,
 			);
 			path = VR;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				657CD0AF238869EF00592709 /* textfieldsimage.swift in Sources */,
 				657C734023F4D2840010597B /* WeatherViewController.swift in Sources */,
 				657C733C23F4D2310010597B /* WeatherData.swift in Sources */,
+				650F32592482F7BE0063C416 /* otherPlacesCell.swift in Sources */,
 				659BBF682438314F00217A3A /* PhotoSelectorController.swift in Sources */,
 				657402772402170F005DD3AD /* CurrencyExchangeViewController.swift in Sources */,
 				65CF7E342439676E00FECF52 /* PostDetails.swift in Sources */,
