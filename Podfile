@@ -16,6 +16,7 @@ pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
+pod 'FBSDKLoginKit'
 pod 'Kingfisher', '~> 5.0'
 pod "CTPanoramaView", "~> 1.3"
 pod 'Firebase/Analytics'

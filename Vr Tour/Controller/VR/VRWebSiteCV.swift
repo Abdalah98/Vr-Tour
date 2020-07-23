@@ -25,22 +25,22 @@ class VRWebSiteCV: UIViewController ,WKNavigationDelegate {
     
 
     }
-    override public var shouldAutorotate: Bool {
-        return false
-    }
-
-    override public var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .landscapeRight
-    }
-
-    override public var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-        return .landscapeRight
-    }
+//    override public var shouldAutorotate: Bool {
+//        return false
+//    }
+//
+//    override public var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+//        return .landscapeRight
+//    }
+//
+//    override public var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+//        return .landscapeRight
+ //   }
     
 
-    @IBAction func cancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-
-    }
+//    @IBAction func cancel(_ sender: Any) {
+//        dismiss(animated: true, completion: nil)
+//
+//    }
 }
 

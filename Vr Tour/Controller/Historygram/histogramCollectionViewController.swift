@@ -104,16 +104,19 @@ class histogramCollectionViewController: UICollectionViewController ,UICollectio
                    self.collectionView.reloadData()
                    
                }
-           }) { (err) in
+            self.collectionView.reloadData()
+
+           })
+              { (err) in
                print(err.localizedDescription)
                
            }
-                     self.collectionView.reloadData()
+                   //  self.collectionView.reloadData()
              }) { (err) in
                  print(err.localizedDescription)
              }
         
-       self.collectionView.reloadData()
+      // self.collectionView.reloadData()
         
     }
 
