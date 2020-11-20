@@ -16,8 +16,7 @@ View tourist places and roaming technology virtual reality
 <kbd><img src="https://user-images.githubusercontent.com/41602889/99838130-4f7fb380-2b71-11eb-9200-be0c4aaea1fa.png" width="200" height="380">
 
 #### Location VR
-<kbd><img src="https://user-images.githubusercontent.com/41602889/99838784-52c76f00-2b72-11eb-9142-cc6e5943c1b4.png" width="200" height="380">  </kbd><kbd><img src="https://user-images.githubusercontent.com/41602889/99838740-43e0bc80-2b72-11eb-9158-0414992b8bb2.png
-" width="200" height="380"></kbd> 
+<kbd><img src="https://user-images.githubusercontent.com/41602889/99838784-52c76f00-2b72-11eb-9142-cc6e5943c1b4.png" width="200" height="380">  </kbd><kbd><img src="https://user-images.githubusercontent.com/41602889/99838740-43e0bc80-2b72-11eb-9158-0414992b8bb2.png" width="200" height="380"></kbd> 
 
 #### Nearby places
 <kbd><img src="https://user-images.githubusercontent.com/41602889/99837560-77224c00-2b70-11eb-9bef-270eb9a315e3.png" width="200" height="380">  </kbd><kbd><img src="https://user-images.githubusercontent.com/41602889/99837563-7a1d3c80-2b70-11eb-8336-c3fec7cc51c6.png" width="200" height="380"></kbd> 
