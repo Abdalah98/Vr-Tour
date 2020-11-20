@@ -43,3 +43,7 @@
 
 #### Nearby places
 <kbd><img src="https://user-images.githubusercontent.com/41602889/99837560-77224c00-2b70-11eb-9bef-270eb9a315e3.png" width="200" height="380">  </kbd><kbd><img src="https://user-images.githubusercontent.com/41602889/99837563-7a1d3c80-2b70-11eb-8336-c3fec7cc51c6.png" width="200" height="380"></kbd> 
+
+
+#### Instagram Firbsae
+<kbd><img src="https://user-images.githubusercontent.com/41602889/99840464-455fb400-2b75-11eb-8d41-f162fd61fc42.png" width="200" height="380">  </kbd><kbd><img src="https://user-images.githubusercontent.com/41602889/99840693-b4d5a380-2b75-11eb-8d15-c5fd1d849710.png" width="200" height="380"></kbd>   </kbd><kbd><img src="https://user-images.githubusercontent.com/41602889/99840710-bc954800-2b75-11eb-9e94-0a59c6937cf1.png" width="200" height="380"></kbd>   </kbd><kbd><img src="https://user-images.githubusercontent.com/41602889/99840727-c1f29280-2b75-11eb-8a13-b285a5016696.png" width="200" height="380"></kbd>  
