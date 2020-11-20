@@ -1,15 +1,17 @@
 # Vr-Tour
-### Project Graduation
-• View tourist places and roaming technology virtual reality
-• VR tour is a mobile application that allows you to watch multi historical places in Egypt with VR technology
-• it has some additional feature like:
-• currency converter
-• weather
-• search places with voice
-• nearby places and Calculate the distance between the place and the user
-• explaining about the place and you can be listening to it with text to voice app
-• it supports 2 languages
-• and small Instagram for users to interact with each other
+
+# Project Graduation
+	•	  View tourist places and roaming technology virtual reality
+	•	  VR tour is a mobile application that allows you to watch multi historical places in Egypt with VR technology
+	•	 View tourist places and roaming technology virtual reality
+	•	 currency converter
+	•	 weather
+	•	 search places with voice
+	•	 nearby places and Calculate the distance between the place and the user
+	•	 explaining about the place and you can be listening to it with text to voice app
+	•	 it supports 2 languages
+	•	 and small Instagram for users to interact with each other
+
 
 # Features
 	•	 Firebase (realtime &storage)
