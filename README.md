@@ -46,4 +46,4 @@
 
 
 #### Instagram Firbsae
-<kbd><img src="https://user-images.githubusercontent.com/41602889/99840464-455fb400-2b75-11eb-8d41-f162fd61fc42.png" width="200" height="380">  </kbd><kbd><img src="https://user-images.githubusercontent.com/41602889/99840710-bc954800-2b75-11eb-9e94-0a59c6937cf1.png" width="200" height="380"></kbd>   </kbd><kbd><img src="https://user-images.githubusercontent.com/41602889/99840693-b4d5a380-2b75-11eb-8d15-c5fd1d849710.png" width="200" height="380"></kbd>    
+<kbd><img src="https://user-images.githubusercontent.com/41602889/99840464-455fb400-2b75-11eb-8d41-f162fd61fc42.png" width="200" height="380">  </kbd><kbd><img src="https://user-images.githubusercontent.com/41602889/99841031-375e6300-2b76-11eb-8693-2ac469d3f9e6.png" width="200" height="380"></kbd>   </kbd><kbd><img src="https://user-images.githubusercontent.com/41602889/99840693-b4d5a380-2b75-11eb-8d15-c5fd1d849710.png" width="200" height="380"></kbd>    
